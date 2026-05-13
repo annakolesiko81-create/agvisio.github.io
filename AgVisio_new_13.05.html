@@ -1,0 +1,3390 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO: Title и Description оптимизированы под высокочастотные запросы -->
+<title>AgVisio — компьютерное зрение для животноводства | ИИ-видеоаналитика для птицефабрик и свинокомплексов</title>
+<meta name="description" content="AgVisio — система компьютерного зрения и AI-видеоаналитики для агрохолдингов. Автоматический подсчёт поголовья, контроль веса, ранняя диагностика болезней в птицеводстве, свиноводстве и КРС. Снижение потерь до 18%. Окупаемость от 6 месяцев. Внедрение от 4 недель.">
+<meta name="keywords" content="компьютерное зрение в животноводстве, видеоаналитика для птицефабрики, AI для свинокомплекса, цифровизация животноводства, автоматический подсчёт свиней, мониторинг бройлеров, ИИ для агрохолдинга, нейросеть для фермы, точное животноводство, smart farming Россия">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="AgVisio — компьютерное зрение для агрохолдингов">
+<meta property="og:description" content="ИИ-видеоаналитика для птицефабрик, свинокомплексов и молочных ферм. Снижение потерь поголовья на 15–20%. Окупаемость за один производственный цикл.">
+<meta property="og:url" content="https://agvisio.ru">
+<meta property="og:site_name" content="AgVisio">
+
+<!-- Фавикон: SVG-марка AgVisio из брендбука -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNzcgMjY3Ij48cGF0aCBkPSJNMTM1LjY2NCAxMTcuMjE1QzE2MC40MDcgMTE0LjgxOSAxODIuNDA0IDEzMi45NDEgMTg0Ljc4OSAxNTcuNjg1QzE4Ny4xNzQgMTgyLjQyOCAxNjkuMDQzIDIwNC40MTggMTQ0LjI5OSAyMDYuNzkzQzExOS41NjggMjA5LjE2NiA5Ny41OTQzIDE5MS4wNDggOTUuMjEwNyAxNjYuMzE5QzkyLjgyNzIgMTQxLjU5IDExMC45MzYgMTE5LjYwOCAxMzUuNjY0IDExNy4yMTVaIiBmaWxsPSIjMUE3QTg1Ii8+PHBhdGggZD0iTTEzNi41NjcgNDAuMTI5M0MxNTAuNzg4IDM4LjY4MDEgMTUzLjgwNiA0OS44NzI3IDE1OS44NTcgNTkuODUxNEMxNjguMDk4IDczLjQ0MDQgMTc1LjQ4NSA4Ny40NDcyIDE4My41NTEgMTAxLjEyNUMxODYuMDc2IDEwNS40MDcgMTg4LjgyOSAxMTEuMzM1IDE5MiAxMTQuOTgzQzE4Ni42NDkgMTEyLjA3NyAxNzMuODQyIDEwOC44MDMgMTY3LjY2OSAxMDcuMzA4QzE2MC40NTQgMTA1LjU2MSAxNDkuODQyIDEwNC44OCAxNDIuMzgxIDEwNC41ODdDMTI5LjUxNiAxMDQuMTgxIDExNS44NSAxMDUuMzEzIDEwMy40NyAxMDguOTUxQzk3LjYxMTIgMTEwLjY3MiA5MS41NzExIDExMi40NzMgODYgMTE1LjAwMkM4OS4yMTYgMTEwLjYzOCA5My41NDEyIDEwMi40NjcgOTYuMzg4MiA5Ny40NjczTDExNS42NTYgNjQuMjI3OEMxMTguODA2IDU4LjczMDIgMTIxLjY1MiA1Mi43NDA5IDEyNS4xNTkgNDcuMzk5N0MxMjcuOTA2IDQzLjIxMzkgMTMxLjczMiA0MS4wNTIyIDEzNi41NjcgNDAuMTI5M1oiIGZpbGw9IiMwRDQ0NzAiLz48cGF0aCBkPSJNMjA4LjQ0NyAxNDQuMDAyQzIwOC44MiAxNDQuMzAxIDIwOS4wMDEgMTQ1LjYxIDIwOS4xOTQgMTQ2LjE1QzIxNi4wNzggMTY1LjQzMyAyMjUuODM5IDE4NC41MDIgMjM1LjM0NyAyMDMuNjUxQzIzOS44MTEgMjEzLjUwMiAyMzUuMzQ3IDIyNi41MDIgMjIwLjU3MSAyMjYuNDc3QzIxMy42MSAyMjcuMTQxIDIwOC4zODQgMjI2Ljg0MyAyMDMuMzIzIDIyNi44NDFMMTY5LjI4IDIyNi44MjNDMTY2LjE0MSAyMjYuODE2IDE0Ny44NjUgMjI3LjI5NCAxNDYgMjI2LjcxN0MxNDkuNTk2IDIyNS40MzcgMTUzLjg2IDIyNC4wNzIgMTU3LjI5NSAyMjIuMzc2QzE4NC4xMTUgMjA5LjEyOCAyMDAuMzE1IDE4MS4xMzMgMjA2LjQ1MiAxNTMuMTU2QzIwNy4wMDIgMTUwLjY0NyAyMDcuNTA3IDE0Ni40MzUgMjA4LjM2OSAxNDQuMTk4TDIwOC40NDcgMTQ0LjAwMloiIGZpbGw9IiMwRDQ0NzAiLz48cGF0aCBkPSJNNjguNTUzIDE0NC4wMDJDNjguMTggMTQ0LjMwMSA2Ny45OTg3IDE0NS42MSA2Ny44MDU5IDE0Ni4xNUM2MC45MjIxIDE2NS40MzMgNTEuMTYxMSAxODQuNTAyIDQxLjY1MjcgMjAzLjY1MUMzNy4xODkzIDIxMy41MDIgNDEuNjUyNyAyMjYuNTAyIDU2LjQyODcgMjI2LjQ3N0M2My4zODk2IDIyNy4xNDEgNjguNjE2NCAyMjYuODQzIDczLjY3NjUgMjI2Ljg0MUwxMDcuNzIgMjI2LjgyM0MxMTAuODU5IDIyNi44MTYgMTI5LjEzNSAyMjcuMjk0IDEzMSAyMjYuNzE3QzEyNy40MDQgMjI1LjQzNyAxMjMuMTQgMjI0LjA3MiAxMTkuNzA1IDIyMi4zNzZDOTIuODg1NCAyMDkuMTI4IDc2LjY4NDYgMTgxLjEzMyA3MC41NDg0IDE1My4xNTZDNjkuOTk4MSAxNTAuNjQ3IDY5LjQ5MjcgMTQ2LjQzNSA2OC42MzA1IDE0NC4xOThMNjguNTUzIDE0NC4wMDJaIiBmaWxsPSIjMEQ0NDcwIi8+PC9zdmc+">
+<link rel="shortcut icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNzcgMjY3Ij48cGF0aCBkPSJNMTM1LjY2NCAxMTcuMjE1QzE2MC40MDcgMTE0LjgxOSAxODIuNDA0IDEzMi45NDEgMTg0Ljc4OSAxNTcuNjg1QzE4Ny4xNzQgMTgyLjQyOCAxNjkuMDQzIDIwNC40MTggMTQ0LjI5OSAyMDYuNzkzQzExOS41NjggMjA5LjE2NiA5Ny41OTQzIDE5MS4wNDggOTUuMjEwNyAxNjYuMzE5QzkyLjgyNzIgMTQxLjU5IDExMC45MzYgMTE5LjYwOCAxMzUuNjY0IDExNy4yMTVaIiBmaWxsPSIjMUE3QTg1Ii8+PHBhdGggZD0iTTEzNi41NjcgNDAuMTI5M0MxNTAuNzg4IDM4LjY4MDEgMTUzLjgwNiA0OS44NzI3IDE1OS44NTcgNTkuODUxNEMxNjguMDk4IDczLjQ0MDQgMTc1LjQ4NSA4Ny40NDcyIDE4My41NTEgMTAxLjEyNUMxODYuMDc2IDEwNS40MDcgMTg4LjgyOSAxMTEuMzM1IDE5MiAxMTQuOTgzQzE4Ni42NDkgMTEyLjA3NyAxNzMuODQyIDEwOC44MDMgMTY3LjY2OSAxMDcuMzA4QzE2MC40NTQgMTA1LjU2MSAxNDkuODQyIDEwNC44OCAxNDIuMzgxIDEwNC41ODdDMTI5LjUxNiAxMDQuMTgxIDExNS44NSAxMDUuMzEzIDEwMy40NyAxMDguOTUxQzk3LjYxMTIgMTEwLjY3MiA5MS41NzExIDExMi40NzMgODYgMTE1LjAwMkM4OS4yMTYgMTEwLjYzOCA5My41NDEyIDEwMi40NjcgOTYuMzg4MiA5Ny40NjczTDExNS42NTYgNjQuMjI3OEMxMTguODA2IDU4LjczMDIgMTIxLjY1MiA1Mi43NDA5IDEyNS4xNTkgNDcuMzk5N0MxMjcuOTA2IDQzLjIxMzkgMTMxLjczMiA0MS4wNTIyIDEzNi41NjcgNDAuMTI5M1oiIGZpbGw9IiMwRDQ0NzAiLz48cGF0aCBkPSJNMjA4LjQ0NyAxNDQuMDAyQzIwOC44MiAxNDQuMzAxIDIwOS4wMDEgMTQ1LjYxIDIwOS4xOTQgMTQ2LjE1QzIxNi4wNzggMTY1LjQzMyAyMjUuODM5IDE4NC41MDIgMjM1LjM0NyAyMDMuNjUxQzIzOS44MTEgMjEzLjUwMiAyMzUuMzQ3IDIyNi41MDIgMjIwLjU3MSAyMjYuNDc3QzIxMy42MSAyMjcuMTQxIDIwOC4zODQgMjI2Ljg0MyAyMDMuMzIzIDIyNi44NDFMMTY5LjI4IDIyNi44MjNDMTY2LjE0MSAyMjYuODE2IDE0Ny44NjUgMjI3LjI5NCAxNDYgMjI2LjcxN0MxNDkuNTk2IDIyNS40MzcgMTUzLjg2IDIyNC4wNzIgMTU3LjI5NSAyMjIuMzc2QzE4NC4xMTUgMjA5LjEyOCAyMDAuMzE1IDE4MS4xMzMgMjA2LjQ1MiAxNTMuMTU2QzIwNy4wMDIgMTUwLjY0NyAyMDcuNTA3IDE0Ni40MzUgMjA4LjM2OSAxNDQuMTk4TDIwOC40NDcgMTQ0LjAwMloiIGZpbGw9IiMwRDQ0NzAiLz48cGF0aCBkPSJNNjguNTUzIDE0NC4wMDJDNjguMTggMTQ0LjMwMSA2Ny45OTg3IDE0NS42MSA2Ny44MDU5IDE0Ni4xNUM2MC45MjIxIDE2NS40MzMgNTEuMTYxMSAxODQuNTAyIDQxLjY1MjcgMjAzLjY1MUMzNy4xODkzIDIxMy41MDIgNDEuNjUyNyAyMjYuNTAyIDU2LjQyODcgMjI2LjQ3N0M2My4zODk2IDIyNy4xNDEgNjguNjE2NCAyMjYuODQzIDczLjY3NjUgMjI2Ljg0MUwxMDcuNzIgMjI2LjgyM0MxMTAuODU5IDIyNi44MTYgMTI5LjEzNSAyMjcuMjk0IDEzMSAyMjYuNzE3QzEyNy40MDQgMjI1LjQzNyAxMjMuMTQgMjI0LjA3MiAxMTkuNzA1IDIyMi4zNzZDOTIuODg1NCAyMDkuMTI4IDc2LjY4NDYgMTgxLjEzMyA3MC41NDg0IDE1My4xNTZDNjkuOTk4MSAxNTAuNjQ3IDY5LjQ5MjcgMTQ2LjQzNSA2OC42MzA1IDE0NC4xOThMNjguNTUzIDE0NC4wMDJaIiBmaWxsPSIjMEQ0NDcwIi8+PC9zdmc+">
+<!-- Шрифты по брендбуку: Instrument Sans (заголовки), Inter (тело текста), Roboto Mono (тех. данные) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- Schema.org для попадания в AI-выдачу и сниппеты -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "AgVisio",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web, Cloud",
+  "description": "Система компьютерного зрения для агрохолдингов. ИИ-видеоаналитика поведения, веса и здоровья животных в птицеводстве, свиноводстве и молочном животноводстве.",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "RUB",
+    "price": "0",
+    "description": "Расчёт стоимости индивидуально по результатам аудита производства"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "Инлайн",
+    "telephone": "+7 (812) 425-32-65",
+    "email": "sale@inline-ltd.ru",
+    "url": "https://agvisio.ru"
+  },
+  "featureList": [
+    "Автоматический подсчёт поголовья с точностью 99,9%",
+    "Бесконтактное взвешивание животных по видео",
+    "Раннее выявление заболеваний за несколько дней до симптомов",
+    "Контроль кормоконверсии (FCR) в реальном времени",
+    "Интеграция с 1С и ERP",
+    "Поддержка 24/7"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Что такое компьютерное зрение в животноводстве?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Компьютерное зрение в животноводстве — это технология, которая с помощью камер и нейросетей автоматически анализирует поведение, вес, состояние здоровья и численность животных без участия персонала. AgVisio использует обученные модели CV для птицефабрик, свинокомплексов и молочных ферм."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Сколько стоит внедрение AgVisio на свинокомплекс?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Стоимость рассчитывается индивидуально после аудита. Типичная окупаемость для свинокомплекса на 200 000 голов в год — 6–12 месяцев. Экономический эффект составляет около 9 долларов на одну товарную свинью за цикл откорма за счёт улучшения кормоконверсии и точной отгрузки."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Какой эффект даёт видеоаналитика на птицефабрике?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Для бройлерного комплекса экономический эффект составляет около 300 долларов на 1 000 голов за цикл выращивания (42 дня). На крупном комплексе на 30 млн голов в год это до 9 млн долларов экономии за счёт улучшения FCR, снижения падежа на 1–2 процентных пункта и точки оптимальной отгрузки."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Нужно ли менять оборудование на производстве для внедрения AgVisio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Нет. AgVisio работает с существующими IP-камерами там, где это возможно, и интегрируется с действующими системами учёта (1С, ERP). Перестройка корпусов или замена оборудования не требуется. Типовое время внедрения — 4 недели."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Какая точность распознавания у моделей AgVisio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Точность распознавания моделей компьютерного зрения AgVisio — 98,7%. Точность автоматического подсчёта поголовья при перегоне — 99,9%. Задержка обработки видео — менее 120 мс."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+/* ===== ТОКЕНЫ БРЕНДБУКА ===== */
+:root {
+  /* Основные */
+  --deep-ocean: #0A2A4A;
+  --deep-ocean: #0A2A4A;
+  --brand-blue: #0D3E70;
+  --brand-teal: #1A7A85;
+  --mint: #73B9BF;
+  --leaf: #4FA890;
+  --clay: #D97757;
+  --cream: #F6F6EE;
+
+  /* Акценты */
+  --mint: #73B9BF;
+  --leaf: #4FA890;
+  --clay: #D97757;
+
+  /* Нейтральные */
+  --cream: #F6F6EE;
+  --mist: #D8DDE0;
+  --ink: #1B2433;
+
+  /* Прозрачности */
+  --ink-60: rgba(27, 36, 51, 0.6);
+  --ink-40: rgba(27, 36, 51, 0.4);
+  --ink-12: rgba(27, 36, 51, 0.12);
+  --teal-12: rgba(26, 122, 133, 0.12);
+  --leaf-15: rgba(79, 168, 144, 0.15);
+  --clay-15: rgba(217, 119, 87, 0.15);
+
+  /* Радиусы */
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 16px;
+  --r-xl: 24px;
+
+  /* Шрифты */
+  --font-display: 'Instrument Sans', Arial, sans-serif;
+  --font-body: 'Outfit', Arial, sans-serif;
+  --font-mono: 'PT Sans', Arial, sans-serif;
+
+  --container: 1280px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--cream);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ===== УТИЛИТЫ ===== */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+@media (max-width: 768px) {
+  .container { padding: 0 20px; }
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--brand-teal);
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.eyebrow--light { color: var(--mint); }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--brand-blue);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+h1 { font-size: clamp(36px, 5.5vw, 64px); letter-spacing: -0.03em; }
+h2 { font-size: clamp(28px, 3.8vw, 44px); }
+h3 { font-size: clamp(20px, 2.2vw, 26px); }
+
+.section {
+  padding: 96px 0;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .section { padding: 64px 0; }
+}
+
+/* ===== ХЕДЕР ===== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 8px 0;
+  background: rgba(246, 246, 238, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s, background 0.3s;
+}
+
+.header.scrolled {
+  border-bottom-color: var(--ink-12);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--brand-blue);
+  letter-spacing: -0.02em;
+}
+
+.logo__mark {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  background: linear-gradient(135deg, var(--brand-blue) 0%, var(--brand-teal) 60%, var(--leaf) 100%);
+  display: grid;
+  place-items: center;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.logo__mark svg { width: 22px; height: 22px; }
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav__link {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav__link:hover { color: var(--brand-teal); }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 20px;
+  height: 44px;
+  border-radius: var(--r-sm);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.15s, box-shadow 0.2s, background 0.2s;
+  white-space: nowrap;
+}
+
+.btn--primary {
+  background: var(--brand-teal);
+  color: white;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.04), 0 4px 12px rgba(26, 122, 133, 0.2);
+}
+
+.btn--primary:hover {
+  background: #176c76;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(26, 122, 133, 0.28);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--brand-blue);
+  border: 1.5px solid var(--mist);
+}
+
+.btn--ghost:hover {
+  border-color: var(--brand-teal);
+  color: var(--brand-teal);
+}
+
+.btn--light {
+  background: white;
+  color: var(--brand-blue);
+}
+
+.btn--light:hover { background: var(--cream); }
+
+.btn--lg { height: 52px; padding: 0 28px; font-size: 15px; }
+
+.btn .arrow { transition: transform 0.2s; }
+.btn:hover .arrow { transform: translateX(3px); }
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+@media (max-width: 968px) {
+  .nav { display: none; }
+  .nav-toggle { display: grid; place-items: center; }
+}
+
+/* ===== HERO ===== */
+.hero {
+  position: relative;
+  padding: 160px 0 100px;
+  background:
+    radial-gradient(ellipse at 80% 20%, rgba(26, 122, 133, 0.18) 0%, transparent 55%),
+    radial-gradient(ellipse at 20% 80%, rgba(79, 168, 144, 0.12) 0%, transparent 50%),
+    linear-gradient(180deg, var(--deep-ocean) 0%, var(--brand-blue) 100%);
+  color: white;
+  overflow: hidden;
+}
+
+.hero__grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(115, 185, 191, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(115, 185, 191, 0.06) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+}
+
+.hero__inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 64px;
+  align-items: center;
+}
+
+@media (max-width: 968px) {
+  .hero__inner { grid-template-columns: 1fr; gap: 48px; }
+}
+
+.hero h1 {
+  color: white;
+  margin-bottom: 24px;
+}
+
+.hero h1 em {
+  font-style: normal;
+  background: linear-gradient(90deg, var(--mint) 0%, var(--leaf) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero__lead {
+  font-size: clamp(16px, 1.5vw, 19px);
+  color: rgba(255,255,255,0.78);
+  max-width: 540px;
+  margin-bottom: 36px;
+  line-height: 1.55;
+}
+
+.hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 48px;
+}
+
+.hero__metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255,255,255,0.12);
+}
+
+@media (max-width: 640px) {
+  .hero__metrics { grid-template-columns: repeat(2, 1fr); }
+}
+
+.metric__value {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 700;
+  color: white;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.metric__label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+}
+
+/* ===== HERO VISUAL — кастомная "наблюдательная панель" ===== */
+.hero__visual {
+  position: relative;
+  aspect-ratio: 1.05 / 1;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+}
+
+.agv-dashboard {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: var(--r-lg);
+  filter: drop-shadow(0 24px 64px rgba(10,42,74,0.6));
+}
+
+/* убираем старые hv-стили */
+.hv__header, .hv__scene, .hv__shape, .hv__bbox, .hv__footer,
+.hv__stat__label, .hv__stat__value { display: none; }
+
+
+/* ===== ПОЛОСА ДОВЕРИЯ ===== */
+.trust-bar {
+  background: var(--cream);
+  border-bottom: 1px solid var(--mist);
+  padding: 28px 0;
+}
+
+.trust-bar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.trust-bar__label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-60);
+}
+
+.trust-bar__items {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.trust-bar__item {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink-60);
+  letter-spacing: -0.01em;
+}
+
+/* ===== ПРОБЛЕМА → РЕШЕНИЕ ===== */
+.problem-block {
+  background: var(--cream);
+}
+
+.problem-block__head {
+  max-width: 760px;
+  margin-bottom: 64px;
+}
+
+.problem-block__head h2 {
+  margin-bottom: 20px;
+}
+
+.problem-block__head p {
+  font-size: 18px;
+  color: var(--ink-60);
+  line-height: 1.55;
+}
+
+.problem-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 968px) {
+  .problem-grid { grid-template-columns: 1fr; }
+}
+
+.problem-card {
+  background: white;
+  border: 1px solid var(--mist);
+  border-radius: var(--r-lg);
+  padding: 32px;
+  position: relative;
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+}
+
+.problem-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--brand-teal);
+  box-shadow: 0 12px 32px rgba(13, 62, 112, 0.08);
+}
+
+.problem-card__num {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--clay);
+  margin-bottom: 16px;
+}
+
+.problem-card__problem {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--brand-blue);
+  margin-bottom: 12px;
+  line-height: 1.25;
+}
+
+.problem-card__hr {
+  margin: 24px 0;
+  border: none;
+  border-top: 1px dashed var(--mist);
+}
+
+.problem-card__solution-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--leaf);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.problem-card__solution {
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+/* ===== ОТРАСЛИ (ГЛАВНЫЙ БЛОК — ПТИЦЕ + СВИНОВ.) ===== */
+.industries {
+  background: linear-gradient(180deg, var(--cream) 0%, white 100%);
+  position: relative;
+}
+
+.industries__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 32px;
+  margin-bottom: 56px;
+  flex-wrap: wrap;
+}
+
+.industries__head h2 { max-width: 700px; }
+
+.industries__head p {
+  max-width: 380px;
+  color: var(--ink-60);
+  font-size: 16px;
+}
+
+.industries__tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 10px 18px;
+  border-radius: 100px;
+  border: 1.5px solid var(--mist);
+  background: white;
+  color: var(--ink-60);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tab:hover { border-color: var(--brand-teal); color: var(--brand-teal); }
+
+.tab.active {
+  background: var(--brand-blue);
+  border-color: var(--brand-blue);
+  color: white;
+}
+
+.industry-panel {
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+
+.industry-panel.active { display: grid; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.industry-panel {
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: stretch;
+}
+
+@media (max-width: 968px) {
+  .industry-panel { grid-template-columns: 1fr; gap: 32px; }
+}
+
+.industry-panel__left {
+  background: var(--brand-blue);
+  border-radius: var(--r-lg);
+  padding: 40px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  min-height: 420px;
+}
+
+.industry-panel__left::before {
+  content: '';
+  position: absolute;
+  top: -50%; right: -30%;
+  width: 80%; height: 180%;
+  background: radial-gradient(circle, var(--brand-teal) 0%, transparent 65%);
+  opacity: 0.45;
+}
+
+.industry-panel__left > * { position: relative; z-index: 1; }
+
+.industry-panel__tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--mint);
+  margin-bottom: 16px;
+}
+
+.industry-panel__title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3vw, 36px);
+  font-weight: 700;
+  color: white;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  line-height: 1.1;
+}
+
+.industry-panel__desc {
+  color: rgba(255,255,255,0.78);
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.industry-panel__stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+.ipstat__value {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: white;
+  margin-bottom: 4px;
+  line-height: 1;
+}
+
+.ipstat__value em {
+  font-style: normal;
+  color: var(--leaf);
+}
+
+.ipstat__label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+}
+
+.industry-panel__right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.feature-row {
+  background: white;
+  border: 1px solid var(--mist);
+  border-radius: var(--r-md);
+  padding: 24px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  align-items: start;
+  transition: border-color 0.25s, transform 0.2s;
+}
+
+.feature-row:hover { border-color: var(--brand-teal); transform: translateX(2px); }
+
+.feature-row__icon {
+  width: 44px; height: 44px;
+  border-radius: 9px;
+  background: var(--teal-12);
+  display: grid;
+  place-items: center;
+  color: var(--brand-teal);
+  flex-shrink: 0;
+}
+
+.feature-row__icon svg { width: 22px; height: 22px; }
+
+.feature-row__title {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--brand-blue);
+  margin-bottom: 6px;
+}
+
+.feature-row__text {
+  font-size: 14px;
+  color: var(--ink-60);
+  line-height: 1.55;
+}
+
+/* ===== КАК РАБОТАЕТ ===== */
+.how {
+  background: var(--brand-blue);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.how::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 50%;
+  width: 1000px; height: 1000px;
+  background: radial-gradient(circle, var(--brand-teal) 0%, transparent 60%);
+  opacity: 0.25;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.how__head { position: relative; max-width: 700px; margin-bottom: 64px; }
+.how__head h2 { color: white; }
+.how__head p { color: rgba(255,255,255,0.7); margin-top: 16px; font-size: 18px; }
+.how__head .eyebrow { color: var(--mint); }
+
+.steps {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 968px) { .steps { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .steps { grid-template-columns: 1fr; } }
+
+.step {
+  position: relative;
+  padding: 32px 24px;
+  border-radius: var(--r-md);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(115, 185, 191, 0.18);
+}
+
+.step__num {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--mint);
+  margin-bottom: 16px;
+}
+
+.step__icon {
+  width: 48px; height: 48px;
+  border-radius: 10px;
+  background: var(--brand-teal);
+  display: grid;
+  place-items: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.step__icon svg { width: 24px; height: 24px; }
+
+.step__title {
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+
+.step__text {
+  color: rgba(255,255,255,0.65);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+/* ===== ЭКОНОМИКА (КЕЙСЫ ПО ОТРАСЛЯМ) ===== */
+.economics {
+  background: var(--cream);
+}
+
+.economics__head { max-width: 760px; margin-bottom: 64px; }
+.economics__head h2 { margin-bottom: 16px; }
+.economics__head p { color: var(--ink-60); font-size: 18px; }
+
+.eco-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 968px) { .eco-grid { grid-template-columns: 1fr; } }
+
+.eco-card {
+  background: white;
+  border-radius: var(--r-lg);
+  padding: 36px;
+  border: 1px solid var(--mist);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.eco-card--featured {
+  background: var(--brand-blue);
+  color: white;
+  border-color: var(--brand-blue);
+}
+
+.eco-card__type {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--brand-teal);
+  margin-bottom: 12px;
+}
+
+.eco-card--featured .eco-card__type { color: var(--mint); }
+
+.eco-card__title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--brand-blue);
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+
+.eco-card--featured .eco-card__title { color: white; }
+
+.eco-card__sub {
+  font-size: 14px;
+  color: var(--ink-60);
+  margin-bottom: 28px;
+}
+
+.eco-card--featured .eco-card__sub { color: rgba(255,255,255,0.65); }
+
+.eco-card__big {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 4.5vw, 56px);
+  font-weight: 700;
+  color: var(--leaf);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  margin-bottom: 8px;
+}
+
+.eco-card__big-label {
+  font-size: 14px;
+  color: var(--ink-60);
+  margin-bottom: 28px;
+}
+
+.eco-card--featured .eco-card__big-label { color: rgba(255,255,255,0.65); }
+
+.eco-card ul {
+  list-style: none;
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+.eco-card li {
+  position: relative;
+  padding: 10px 0 10px 28px;
+  border-top: 1px solid var(--mist);
+  font-size: 14px;
+  color: var(--ink);
+}
+
+.eco-card li:first-child { border-top: none; }
+
+.eco-card--featured li {
+  color: rgba(255,255,255,0.85);
+  border-color: rgba(255,255,255,0.12);
+}
+
+.eco-card li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 16px;
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: var(--leaf-15);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'><path d='M3 7.5l3 3 5-6' stroke='%234FA890' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' fill='none'/></svg>");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.eco-card__payback {
+  margin-top: auto;
+  padding: 16px;
+  border-radius: var(--r-md);
+  background: var(--leaf-15);
+  font-size: 13px;
+  color: var(--brand-blue);
+  font-weight: 600;
+}
+
+.eco-card--featured .eco-card__payback {
+  background: rgba(115, 185, 191, 0.15);
+  color: var(--mint);
+}
+
+.eco-card__payback strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 20px;
+  margin-top: 4px;
+  color: var(--brand-blue);
+}
+
+.eco-card--featured .eco-card__payback strong { color: white; }
+
+/* ===== СРАВНЕНИЕ ===== */
+.compare {
+  background: white;
+}
+
+.compare__head { max-width: 760px; margin-bottom: 56px; }
+
+.compare-table {
+  border: 1px solid var(--mist);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  background: white;
+}
+
+.compare-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.compare-table th, .compare-table td {
+  padding: 20px 24px;
+  text-align: left;
+  font-size: 15px;
+  border-bottom: 1px solid var(--mist);
+}
+
+.compare-table tr:last-child td { border-bottom: none; }
+
+.compare-table th {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-60);
+  background: var(--cream);
+  white-space: nowrap;
+}
+
+.compare-table td:first-child {
+  font-weight: 600;
+  color: var(--brand-blue);
+}
+
+.compare-table .col-old { color: var(--ink-60); }
+.compare-table .col-new { color: var(--brand-blue); font-weight: 600; }
+
+.compare-table .col-new::before {
+  content: '';
+  display: inline-block;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--leaf);
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+  .compare-table { font-size: 13px; }
+  .compare-table th, .compare-table td { padding: 14px 14px; }
+}
+
+/* ===== УСЛОВИЯ / SLA ===== */
+.sla {
+  background: var(--cream);
+}
+
+.sla-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 968px) { .sla-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .sla-grid { grid-template-columns: 1fr; } }
+
+.sla-card {
+  background: white;
+  border: 1px solid var(--mist);
+  border-radius: var(--r-md);
+  padding: 28px;
+}
+
+.sla-card__value {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--brand-blue);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.sla-card__title {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.sla-card__text {
+  font-size: 13px;
+  color: var(--ink-60);
+  line-height: 1.5;
+}
+
+/* ===== FAQ ===== */
+.faq {
+  background: white;
+}
+
+.faq__inner {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 64px;
+}
+
+@media (max-width: 968px) { .faq__inner { grid-template-columns: 1fr; gap: 32px; } }
+
+.faq__head h2 { margin-bottom: 16px; }
+.faq__head p { color: var(--ink-60); }
+
+.faq__list { display: flex; flex-direction: column; gap: 12px; }
+
+.faq-item {
+  background: var(--cream);
+  border: 1px solid var(--mist);
+  border-radius: var(--r-md);
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.faq-item[open] { border-color: var(--brand-teal); }
+
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 22px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--brand-blue);
+  letter-spacing: -0.01em;
+}
+
+.faq-item summary::-webkit-details-marker { display: none; }
+
+.faq-item__icon {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: white;
+  border: 1.5px solid var(--mist);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  transition: transform 0.25s, background 0.2s;
+}
+
+.faq-item[open] .faq-item__icon {
+  transform: rotate(45deg);
+  background: var(--brand-teal);
+  border-color: var(--brand-teal);
+  color: white;
+}
+
+.faq-item__body {
+  padding: 0 24px 22px;
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.faq-item__body p + p { margin-top: 10px; }
+
+/* ===== CTA / КОНТАКТЫ ===== */
+.cta {
+  background: linear-gradient(135deg, var(--deep-ocean) 0%, var(--brand-blue) 60%, var(--brand-teal) 130%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(115, 185, 191, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(115, 185, 191, 0.06) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse at 70% 30%, black 30%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse at 70% 30%, black 30%, transparent 70%);
+}
+
+.cta__inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+@media (max-width: 968px) { .cta__inner { grid-template-columns: 1fr; gap: 40px; } }
+
+.cta h2 { color: white; margin-bottom: 16px; }
+.cta__lead { color: rgba(255,255,255,0.75); font-size: 18px; margin-bottom: 32px; }
+
+.contact-block {
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255,255,255,0.12);
+}
+
+.contact-block__label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--mint);
+  margin-bottom: 16px;
+}
+
+.contact-block__row {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  transition: color 0.2s;
+}
+
+.contact-link:hover { color: var(--mint); }
+
+.contact-link svg { width: 18px; height: 18px; opacity: 0.7; }
+
+.contact-block__small {
+  font-size: 13px;
+  color: rgba(255,255,255,0.55);
+  font-family: var(--font-mono);
+}
+
+/* Форма */
+.form-card {
+  background: white;
+  border-radius: var(--r-lg);
+  padding: 36px;
+  box-shadow: 0 24px 64px rgba(10, 42, 74, 0.35);
+}
+
+.form-card__title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--brand-blue);
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+
+.form-card__sub {
+  font-size: 14px;
+  color: var(--ink-60);
+  margin-bottom: 28px;
+}
+
+.field { margin-bottom: 16px; }
+
+.field label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+
+.field input, .field select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid var(--mist);
+  border-radius: var(--r-sm);
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--ink);
+  background: var(--cream);
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.field input:focus, .field select:focus {
+  outline: none;
+  border-color: var(--brand-teal);
+  background: white;
+  box-shadow: 0 0 0 3px var(--teal-12);
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 540px) { .field-row { grid-template-columns: 1fr; } }
+
+.form-card__btn {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.form-card__legal {
+  font-size: 12px;
+  color: var(--ink-60);
+  margin-top: 14px;
+  line-height: 1.5;
+}
+
+.form-card__legal a { color: var(--brand-teal); }
+
+.form-card__success {
+  display: none;
+  padding: 28px;
+  border-radius: var(--r-md);
+  background: var(--leaf-15);
+  border: 1px solid var(--leaf);
+  text-align: center;
+}
+
+.form-card__success.shown { display: block; }
+
+.form-card__success-icon {
+  width: 56px; height: 56px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: var(--leaf);
+  display: grid;
+  place-items: center;
+  color: white;
+}
+
+.form-card__success h3 { color: var(--brand-blue); margin-bottom: 8px; }
+.form-card__success p { color: var(--ink); font-size: 14px; }
+
+/* ===== ФУТЕР ===== */
+.footer {
+  background: var(--deep-ocean);
+  color: rgba(255,255,255,0.6);
+  padding: 64px 0 32px;
+}
+
+.footer__top {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+@media (max-width: 968px) {
+  .footer__top { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .footer__top { grid-template-columns: 1fr; }
+}
+
+.footer .logo { color: white; margin-bottom: 16px; }
+.footer__about { font-size: 14px; line-height: 1.6; max-width: 320px; }
+
+.footer__col-title {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--mint);
+  margin-bottom: 16px;
+}
+
+.footer__col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+
+.footer__col a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.footer__col a:hover { color: var(--mint); }
+
+.footer__bottom {
+  padding-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: rgba(255,255,255,0.5);
+}
+
+.footer__bottom a { color: rgba(255,255,255,0.5); text-decoration: none; }
+.footer__bottom a:hover { color: var(--mint); }
+
+/* ===== АНИМАЦИИ ПРИ СКРОЛЛЕ ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ===== МОБИЛЬНОЕ МЕНЮ ===== */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: var(--deep-ocean);
+  z-index: 99;
+  padding: 80px 24px 24px;
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mobile-menu.open { display: flex; }
+
+.mobile-menu a {
+  font-family: var(--font-display);
+  font-size: 22px;
+  color: white;
+  text-decoration: none;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.mobile-menu .btn { margin-top: 24px; }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- Знак (mark) -->
+    <symbol id="logo-mark" viewBox="0 0 277 267">
+      <path d="M135.664 117.215C160.407 114.819 182.404 132.941 184.789 157.685C187.174 182.428 169.043 204.418 144.299 206.793C119.568 209.166 97.5943 191.048 95.2107 166.319C92.8272 141.59 110.936 119.608 135.664 117.215Z" fill="#1A7A85"/>
+      <path d="M136.567 40.1293C150.788 38.6801 153.806 49.8727 159.857 59.8514C168.098 73.4404 175.485 87.4472 183.551 101.125C186.076 105.407 188.829 111.335 192 114.983C186.649 112.077 173.842 108.803 167.669 107.308C160.454 105.561 149.842 104.88 142.381 104.587C129.516 104.181 115.85 105.313 103.47 108.951C97.6112 110.672 91.5711 112.473 86 115.002C89.216 110.638 93.5412 102.467 96.3882 97.4673L115.656 64.2278C118.806 58.7302 121.652 52.7409 125.159 47.3997C127.906 43.2139 131.732 41.0522 136.567 40.1293Z" fill="#0D4470"/>
+      <path d="M208.447 144.002C208.82 144.301 209.001 145.61 209.194 146.15C216.078 165.433 225.839 184.502 235.347 203.651C239.811 213.502 235.347 226.502 220.571 226.477C213.61 227.141 208.384 226.843 203.323 226.841L169.28 226.823C166.141 226.816 147.865 227.294 146 226.717C149.596 225.437 153.86 224.072 157.295 222.376C184.115 209.128 200.315 181.133 206.452 153.156C207.002 150.647 207.507 146.435 208.369 144.198L208.447 144.002Z" fill="#0D4470"/>
+      <path d="M68.553 144.002C68.18 144.301 67.9987 145.61 67.8059 146.15C60.9221 165.433 51.1611 184.502 41.6527 203.651C37.1893 213.502 41.6527 226.502 56.4287 226.477C63.3896 227.141 68.6164 226.843 73.6765 226.841L107.72 226.823C110.859 226.816 129.135 227.294 131 226.717C127.404 225.437 123.14 224.072 119.705 222.376C92.8854 209.128 76.6846 181.133 70.5484 153.156C69.9981 150.647 69.4927 146.435 68.6305 144.198L68.553 144.002Z" fill="#0D4470"/>
+    </symbol>
+    <!-- Полный логотип (марка + текст) -->
+    <symbol id="logo-full" viewBox="0 0 1021 267">
+      <defs>
+        <linearGradient id="agvisio-text-gradient" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#0D3E70"/>
+          <stop offset="60%" stop-color="#1A7A85"/>
+          <stop offset="100%" stop-color="#4FA890"/>
+        </linearGradient>
+      </defs>
+      <path d="M135.664 117.215C160.407 114.819 182.404 132.941 184.789 157.685C187.174 182.428 169.043 204.418 144.299 206.793C119.568 209.166 97.5943 191.048 95.2107 166.319C92.8272 141.59 110.936 119.608 135.664 117.215Z" fill="#1A7A85"/>
+      <path d="M136.567 40.1293C150.788 38.6801 153.806 49.8727 159.857 59.8514C168.098 73.4404 175.485 87.4472 183.551 101.125C186.076 105.407 188.829 111.335 192 114.983C186.649 112.077 173.842 108.803 167.669 107.308C160.454 105.561 149.842 104.88 142.381 104.587C129.516 104.181 115.85 105.313 103.47 108.951C97.6112 110.672 91.5711 112.473 86 115.002C89.216 110.638 93.5412 102.467 96.3882 97.4673L115.656 64.2278C118.806 58.7302 121.652 52.7409 125.159 47.3997C127.906 43.2139 131.732 41.0522 136.567 40.1293Z" fill="#0D4470"/>
+      <path d="M208.447 144.002C208.82 144.301 209.001 145.61 209.194 146.15C216.078 165.433 225.839 184.502 235.347 203.651C239.811 213.502 235.347 226.502 220.571 226.477C213.61 227.141 208.384 226.843 203.323 226.841L169.28 226.823C166.141 226.816 147.865 227.294 146 226.717C149.596 225.437 153.86 224.072 157.295 222.376C184.115 209.128 200.315 181.133 206.452 153.156C207.002 150.647 207.507 146.435 208.369 144.198L208.447 144.002Z" fill="#0D4470"/>
+      <path d="M68.553 144.002C68.18 144.301 67.9987 145.61 67.8059 146.15C60.9221 165.433 51.1611 184.502 41.6527 203.651C37.1893 213.502 41.6527 226.502 56.4287 226.477C63.3896 227.141 68.6164 226.843 73.6765 226.841L107.72 226.823C110.859 226.816 129.135 227.294 131 226.717C127.404 225.437 123.14 224.072 119.705 222.376C92.8854 209.128 76.6846 181.133 70.5484 153.156C69.9981 150.647 69.4927 146.435 68.6305 144.198L68.553 144.002Z" fill="#0D4470"/>
+      <path d="M283.8 217.002L335.4 73.0019H361.8L314.4 217.002H283.8ZM389.4 217.002L342.2 73.0019H369.8L421.4 217.002H389.4ZM311 161.202H391.8V185.202H311V161.202ZM480.383 260.002C466.249 260.002 454.716 257.002 445.783 251.002C436.983 245.002 431.783 236.869 430.183 226.602H458.583C459.649 229.135 461.916 231.069 465.383 232.402C468.983 233.735 473.516 234.402 478.983 234.402C488.049 234.402 494.649 232.669 498.783 229.202C502.916 225.735 504.983 220.335 504.983 213.002V190.802L506.583 191.202C505.249 198.669 501.383 204.602 494.983 209.002C488.583 213.269 480.649 215.402 471.183 215.402C462.116 215.402 454.183 213.335 447.383 209.202C440.716 204.935 435.516 199.002 431.783 191.402C428.049 183.802 426.183 174.869 426.183 164.602C426.183 154.202 428.116 145.135 431.983 137.402C435.849 129.669 441.249 123.669 448.183 119.402C455.249 115.135 463.449 113.002 472.783 113.002C482.383 113.002 490.183 115.269 496.183 119.802C502.316 124.335 505.916 130.535 506.983 138.402L505.583 138.602V115.002H534.983V212.602C534.983 227.269 530.116 238.802 520.383 247.202C510.649 255.735 497.316 260.002 480.383 260.002ZM481.583 192.402C488.649 192.402 494.383 190.002 498.783 185.202C503.183 180.269 505.383 173.269 505.383 164.202C505.383 155.135 503.116 148.202 498.583 143.402C494.183 138.469 488.383 136.002 481.183 136.002C474.249 136.002 468.516 138.469 463.983 143.402C459.583 148.335 457.383 155.335 457.383 164.402C457.383 173.469 459.583 180.402 463.983 185.202C468.516 190.002 474.383 192.402 481.583 192.402ZM603.369 217.002L551.769 73.0019H583.769L623.169 193.002H619.369L658.969 73.0019H689.369L637.769 217.002H603.369ZM703.695 217.002V115.002H733.695V217.002H703.695ZM702.695 101.402V69.002H734.695V101.402H702.695ZM798.216 219.002C783.282 219.002 771.416 216.002 762.616 210.002C753.816 204.002 749.016 195.735 748.216 185.202H775.016C775.682 189.735 777.949 193.202 781.816 195.602C785.816 197.869 791.282 199.002 798.216 199.002C804.482 199.002 809.016 198.135 811.816 196.402C814.749 194.535 816.216 191.935 816.216 188.602C816.216 186.069 815.349 184.135 813.616 182.802C812.016 181.335 809.016 180.135 804.616 179.202L788.216 175.802C776.082 173.269 767.149 169.469 761.416 164.402C755.682 159.202 752.816 152.535 752.816 144.402C752.816 134.535 756.616 126.869 764.216 121.402C771.816 115.802 782.416 113.002 796.016 113.002C809.482 113.002 820.216 115.735 828.216 121.202C836.216 126.535 840.616 134.002 841.416 143.602H814.616C814.082 140.135 812.216 137.535 809.016 135.802C805.816 133.935 801.282 133.002 795.416 133.002C790.082 133.002 786.082 133.802 783.416 135.402C780.882 136.869 779.616 139.002 779.616 141.802C779.616 144.202 780.682 146.135 782.816 147.602C784.949 148.935 788.482 150.135 793.416 151.202L811.816 155.002C822.082 157.135 829.816 161.135 835.016 167.002C840.349 172.735 843.016 179.535 843.016 187.402C843.016 197.402 839.082 205.202 831.216 210.802C823.482 216.269 812.482 219.002 798.216 219.002ZM857.797 217.002V115.002H887.797V217.002H857.797ZM856.797 101.402V69.002H888.797V101.402H856.797ZM959.713 219.002C948.513 219.002 938.646 216.802 930.113 212.402C921.713 207.869 915.113 201.602 910.313 193.602C905.646 185.469 903.313 176.135 903.313 165.602C903.313 155.069 905.646 145.869 910.313 138.002C915.113 130.135 921.713 124.002 930.113 119.602C938.646 115.202 948.513 113.002 959.713 113.002C971.046 113.002 980.913 115.202 989.313 119.602C997.846 124.002 1004.45 130.135 1009.11 138.002C1013.78 145.869 1016.11 155.069 1016.11 165.602C1016.11 176.135 1013.71 185.469 1008.91 193.602C1004.25 201.602 997.646 207.869 989.113 212.402C980.713 216.802 970.913 219.002 959.713 219.002ZM959.713 195.402C964.379 195.402 968.579 194.202 972.313 191.802C976.179 189.402 979.246 186.002 981.513 181.602C983.779 177.069 984.913 171.669 984.913 165.402C984.913 156.202 982.446 149.135 977.513 144.202C972.713 139.135 966.779 136.602 959.713 136.602C952.646 136.602 946.646 139.135 941.713 144.202C936.913 149.269 934.513 156.335 934.513 165.402C934.513 171.669 935.646 177.069 937.913 181.602C940.179 186.002 943.179 189.402 946.913 191.802C950.779 194.202 955.046 195.402 959.713 195.402Z" fill="url(#agvisio-text-gradient)"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ============ ХЕДЕР ============ -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="#" class="logo" style="display:flex;align-items:center;text-decoration:none;">
+      <svg viewBox="0 0 1021 267" style="height:42px;width:auto;" aria-label="AgVisio"><use href="#logo-full"/></svg>
+    </a>
+    <nav class="nav">
+      <a href="#solutions" class="nav__link">Решения</a>
+      <a href="#how" class="nav__link">Как работает</a>
+      <a href="#pricing" class="nav__link">Тарифы</a>
+      <a href="#economics" class="nav__link">Экономика</a>
+      <a href="#faq" class="nav__link">Вопросы</a>
+      <a href="#contact" class="btn btn--primary">Заявка на демо</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Меню">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <line x1="3" y1="7" x2="21" y2="7" stroke="#0D3E70" stroke-width="2" stroke-linecap="round"/>
+        <line x1="3" y1="13" x2="21" y2="13" stroke="#0D3E70" stroke-width="2" stroke-linecap="round"/>
+        <line x1="3" y1="19" x2="21" y2="19" stroke="#0D3E70" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#solutions">Решения</a>
+  <a href="#how">Как работает</a>
+  <a href="#pricing">Тарифы</a>
+  <a href="#economics">Экономика</a>
+  <a href="#faq">Вопросы</a>
+  <a href="#contact" class="btn btn--primary btn--lg">Заявка на демо</a>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero__grid-bg"></div>
+  <div class="container hero__inner">
+
+    <div class="hero__content reveal">
+      <span class="eyebrow eyebrow--light">Computer Vision · Livestock 2026</span>
+      <!-- H1: ключевой запрос Яндекс/Google + AI-сниппет -->
+      <h1>Компьютерное зрение для&nbsp;<em>птицефабрик и&nbsp;свинокомплексов</em></h1>
+      <p class="hero__lead">
+        AgVisio — система ИИ-видеоаналитики, которая 24/7 наблюдает за поголовьем
+        и превращает видеопоток в управленческие решения. Снижаем потери
+        на 15–20%, окупаемся за один производственный цикл.
+      </p>
+      <div class="hero__cta">
+        <a href="#contact" class="btn btn--primary btn--lg">
+          Получить расчёт по вашему производству
+          <span class="arrow">→</span>
+        </a>
+        <a href="#how" class="btn btn--ghost btn--lg" style="background: rgba(255,255,255,0.08); color: white; border-color: rgba(255,255,255,0.2);">
+          Как это работает
+        </a>
+      </div>
+
+      <div class="hero__metrics">
+        <div class="metric">
+          <div class="metric__value">98,7%</div>
+          <div class="metric__label">точность CV</div>
+        </div>
+        <div class="metric">
+          <div class="metric__value">24/7</div>
+          <div class="metric__label">мониторинг</div>
+        </div>
+        <div class="metric">
+          <div class="metric__value">−18%</div>
+          <div class="metric__label">потери</div>
+        </div>
+        <div class="metric">
+          <div class="metric__value">4&nbsp;нед.</div>
+          <div class="metric__label">внедрение</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero-визуализация: стилизованный экран наблюдения -->
+    <div class="hero__visual reveal" style="transition-delay: 0.15s;">
+      <svg class="agv-dashboard" viewBox="0 0 480 460" xmlns="http://www.w3.org/2000/svg" aria-label="AgVisio — панель мониторинга">
+        <defs>
+          <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#0A2A4A"/>
+            <stop offset="100%" stop-color="#061824"/>
+          </linearGradient>
+          <linearGradient id="sceneGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#0D3350"/>
+            <stop offset="100%" stop-color="#091c30"/>
+          </linearGradient>
+          <linearGradient id="tealGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#0D3E70"/>
+            <stop offset="100%" stop-color="#1A7A85"/>
+          </linearGradient>
+          <linearGradient id="barGrad1" x1="0" y1="1" x2="0" y2="0">
+            <stop offset="0%" stop-color="#0D3E70" stop-opacity="0.6"/>
+            <stop offset="100%" stop-color="#1A7A85"/>
+          </linearGradient>
+          <linearGradient id="barGrad2" x1="0" y1="1" x2="0" y2="0">
+            <stop offset="0%" stop-color="#0D3E70" stop-opacity="0.4"/>
+            <stop offset="100%" stop-color="#4FA890"/>
+          </linearGradient>
+          <linearGradient id="alertGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#D97757"/>
+            <stop offset="100%" stop-color="#e8916d"/>
+          </linearGradient>
+          <filter id="glow-teal">
+            <feGaussianBlur stdDeviation="2.5" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <filter id="glow-alert">
+            <feGaussianBlur stdDeviation="3" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <clipPath id="sceneClip"><rect x="16" y="52" width="448" height="268" rx="6"/></clipPath>
+          <radialGradient id="warmLight" cx="35%" cy="40%" r="50%">
+            <stop offset="0%" stop-color="#d9a06030" stop-opacity="0.18"/>
+            <stop offset="100%" stop-color="#0D335000" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+
+        <!-- Фон карточки -->
+        <rect width="480" height="460" rx="16" fill="url(#bgGrad)"/>
+        <rect x="1" y="1" width="478" height="458" rx="15" fill="none" stroke="#1A7A85" stroke-opacity="0.2" stroke-width="1"/>
+
+        <!-- ── ХЕДЕР ── -->
+        <rect x="0" y="0" width="480" height="48" rx="16" fill="#0A2A4A"/>
+        <rect x="0" y="32" width="480" height="16" fill="#0A2A4A"/>
+        <rect x="0" y="47" width="480" height="1" fill="#1A7A85" fill-opacity="0.2"/>
+
+        <!-- Dot REC -->
+        <circle cx="24" cy="24" r="4" fill="#4FA890">
+          <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite"/>
+        </circle>
+        <text x="34" y="28.5" font-family="'Roboto Mono', monospace" font-size="10" fill="rgba(255,255,255,0.55)" letter-spacing="1.5">CAM-03 · КОРПУС B · LIVE</text>
+
+        <!-- REC badge -->
+        <rect x="396" y="14" width="68" height="20" rx="4" fill="#D97757" fill-opacity="0.15" stroke="#D97757" stroke-opacity="0.5" stroke-width="1"/>
+        <circle cx="407" cy="24" r="3" fill="#D97757">
+          <animate attributeName="opacity" values="1;0.2;1" dur="1.2s" repeatCount="indefinite"/>
+        </circle>
+        <text x="414" y="28.5" font-family="'Roboto Mono', monospace" font-size="10" fill="#D97757" font-weight="700" letter-spacing="1">REC</text>
+
+        <!-- ── СЦЕНА — видеопоток ── -->
+        <rect x="16" y="52" width="448" height="268" rx="6" fill="url(#sceneGrad)"/>
+        <rect x="16" y="52" width="448" height="268" rx="6" fill="url(#warmLight)"/>
+
+        <!-- Сетка — лёгкий grid overlay -->
+        <g clip-path="url(#sceneClip)" opacity="0.07">
+          <line x1="16" y1="104" x2="464" y2="104" stroke="#73B9BF" stroke-width="0.5"/>
+          <line x1="16" y1="156" x2="464" y2="156" stroke="#73B9BF" stroke-width="0.5"/>
+          <line x1="16" y1="208" x2="464" y2="208" stroke="#73B9BF" stroke-width="0.5"/>
+          <line x1="16" y1="260" x2="464" y2="260" stroke="#73B9BF" stroke-width="0.5"/>
+          <line x1="96"  y1="52" x2="96"  y2="320" stroke="#73B9BF" stroke-width="0.5"/>
+          <line x1="176" y1="52" x2="176" y2="320" stroke="#73B9BF" stroke-width="0.5"/>
+          <line x1="256" y1="52" x2="256" y2="320" stroke="#73B9BF" stroke-width="0.5"/>
+          <line x1="336" y1="52" x2="336" y2="320" stroke="#73B9BF" stroke-width="0.5"/>
+          <line x1="416" y1="52" x2="416" y2="320" stroke="#73B9BF" stroke-width="0.5"/>
+        </g>
+
+        <!-- Силуэты животных (эллипсы — вид сверху) -->
+        <g clip-path="url(#sceneClip)" opacity="0.9">
+          <!-- Animal 1 -->
+          <ellipse cx="110" cy="148" rx="26" ry="18" fill="#1A4060" stroke="#73B9BF" stroke-opacity="0.3" stroke-width="1">
+            <animateTransform attributeName="transform" type="translate" values="0,0;1,-2;0,0" dur="5s" repeatCount="indefinite"/>
+          </ellipse>
+          <!-- Animal 2 -->
+          <ellipse cx="200" cy="220" rx="24" ry="17" fill="#1A4060" stroke="#73B9BF" stroke-opacity="0.3" stroke-width="1">
+            <animateTransform attributeName="transform" type="translate" values="0,0;-1,1;0,0" dur="6.5s" repeatCount="indefinite"/>
+          </ellipse>
+          <!-- Animal 3 — ALERT -->
+          <ellipse cx="330" cy="155" rx="22" ry="16" fill="#3D1F15" stroke="#D97757" stroke-opacity="0.6" stroke-width="1.5">
+            <animate attributeName="stroke-opacity" values="0.6;1;0.6" dur="1.4s" repeatCount="indefinite"/>
+            <animateTransform attributeName="transform" type="translate" values="0,0;2,1;0,0" dur="4s" repeatCount="indefinite"/>
+          </ellipse>
+          <!-- Animal 4 -->
+          <ellipse cx="118" cy="255" rx="25" ry="17" fill="#1A4060" stroke="#73B9BF" stroke-opacity="0.3" stroke-width="1">
+            <animateTransform attributeName="transform" type="translate" values="0,0;1,2;0,0" dur="7s" repeatCount="indefinite"/>
+          </ellipse>
+          <!-- Animal 5 (small, background) -->
+          <ellipse cx="390" cy="240" rx="19" ry="13" fill="#162F45" stroke="#4FA890" stroke-opacity="0.2" stroke-width="1">
+            <animateTransform attributeName="transform" type="translate" values="0,0;-1,-1;0,0" dur="8s" repeatCount="indefinite"/>
+          </ellipse>
+        </g>
+
+        <!-- ── BOUNDING BOXES ── -->
+        <!-- Box 1 — ID#1247 -->
+        <g filter="url(#glow-teal)">
+          <rect x="80" y="126" width="62" height="44" rx="3" fill="none" stroke="#4FA890" stroke-width="1.5">
+            <animate attributeName="opacity" values="1;0.7;1" dur="3s" repeatCount="indefinite"/>
+          </rect>
+          <!-- corners -->
+          <rect x="80" y="126" width="10" height="1.5" fill="#4FA890"/>
+          <rect x="80" y="126" width="1.5" height="10" fill="#4FA890"/>
+          <rect x="132" y="126" width="10" height="1.5" fill="#4FA890"/>
+          <rect x="140.5" y="126" width="1.5" height="10" fill="#4FA890"/>
+          <rect x="80" y="168.5" width="10" height="1.5" fill="#4FA890"/>
+          <rect x="80" y="160" width="1.5" height="10" fill="#4FA890"/>
+          <rect x="132" y="168.5" width="10" height="1.5" fill="#4FA890"/>
+          <rect x="140.5" y="160" width="1.5" height="10" fill="#4FA890"/>
+        </g>
+        <rect x="80" y="113" width="76" height="16" rx="2" fill="#4FA890"/>
+        <text x="84" y="124" font-family="'Roboto Mono', monospace" font-size="9" fill="#062818" font-weight="700">ID#1247 · 87кг</text>
+
+        <!-- Box 2 — ID#1303 -->
+        <g filter="url(#glow-teal)">
+          <rect x="172" y="198" width="57" height="42" rx="3" fill="none" stroke="#1A7A85" stroke-width="1.5">
+            <animate attributeName="opacity" values="1;0.65;1" dur="4.2s" repeatCount="indefinite"/>
+          </rect>
+          <rect x="172" y="198" width="9" height="1.5" fill="#1A7A85"/>
+          <rect x="172" y="198" width="1.5" height="9" fill="#1A7A85"/>
+          <rect x="220" y="198" width="9" height="1.5" fill="#1A7A85"/>
+          <rect x="227.5" y="198" width="1.5" height="9" fill="#1A7A85"/>
+          <rect x="172" y="238.5" width="9" height="1.5" fill="#1A7A85"/>
+          <rect x="172" y="231" width="1.5" height="9" fill="#1A7A85"/>
+          <rect x="220" y="238.5" width="9" height="1.5" fill="#1A7A85"/>
+          <rect x="227.5" y="231" width="1.5" height="9" fill="#1A7A85"/>
+        </g>
+        <rect x="172" y="185" width="72" height="16" rx="2" fill="#1A7A85"/>
+        <text x="176" y="196" font-family="'Roboto Mono', monospace" font-size="9" fill="white" font-weight="700">ID#1303 · 92кг</text>
+
+        <!-- Box 3 — АНОМАЛИЯ -->
+        <g filter="url(#glow-alert)">
+          <rect x="303" y="134" width="58" height="42" rx="3" fill="none" stroke="#D97757" stroke-width="2">
+            <animate attributeName="stroke-width" values="2;2.8;2" dur="1.4s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="1;0.8;1" dur="1.4s" repeatCount="indefinite"/>
+          </rect>
+          <rect x="303" y="134" width="10" height="2" fill="#D97757"/>
+          <rect x="303" y="134" width="2" height="10" fill="#D97757"/>
+          <rect x="351" y="134" width="10" height="2" fill="#D97757"/>
+          <rect x="359" y="134" width="2" height="10" fill="#D97757"/>
+          <rect x="303" y="174" width="10" height="2" fill="#D97757"/>
+          <rect x="303" y="166" width="2" height="10" fill="#D97757"/>
+          <rect x="351" y="174" width="10" height="2" fill="#D97757"/>
+          <rect x="359" y="166" width="2" height="10" fill="#D97757"/>
+        </g>
+        <!-- Alert badge -->
+        <rect x="303" y="118" width="96" height="18" rx="3" fill="url(#alertGrad)">
+          <animate attributeName="opacity" values="1;0.85;1" dur="1.4s" repeatCount="indefinite"/>
+        </rect>
+        <text x="308" y="130" font-family="'Roboto Mono', monospace" font-size="9" fill="white" font-weight="700">АНОМАЛИЯ · ID#1411</text>
+
+        <!-- Box 4 — ID#1102 -->
+        <g filter="url(#glow-teal)">
+          <rect x="88" y="234" width="60" height="42" rx="3" fill="none" stroke="#4FA890" stroke-width="1.5">
+            <animate attributeName="opacity" values="1;0.7;1" dur="5s" repeatCount="indefinite"/>
+          </rect>
+          <rect x="88" y="234" width="9" height="1.5" fill="#4FA890"/>
+          <rect x="88" y="234" width="1.5" height="9" fill="#4FA890"/>
+          <rect x="139" y="234" width="9" height="1.5" fill="#4FA890"/>
+          <rect x="146.5" y="234" width="1.5" height="9" fill="#4FA890"/>
+          <rect x="88" y="274.5" width="9" height="1.5" fill="#4FA890"/>
+          <rect x="88" y="267" width="1.5" height="9" fill="#4FA890"/>
+          <rect x="139" y="274.5" width="9" height="1.5" fill="#4FA890"/>
+          <rect x="146.5" y="267" width="1.5" height="9" fill="#4FA890"/>
+        </g>
+        <rect x="88" y="221" width="72" height="16" rx="2" fill="#4FA890"/>
+        <text x="92" y="232" font-family="'Roboto Mono', monospace" font-size="9" fill="#062818" font-weight="700">ID#1102 · 84кг</text>
+
+        <!-- Scan line анимация -->
+        <rect x="16" y="52" width="448" height="2" fill="url(#tealGrad)" opacity="0.35" rx="1">
+          <animateTransform attributeName="transform" type="translate" values="0,0;0,268;0,0" dur="4s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.35;0.1;0.35" dur="4s" repeatCount="indefinite"/>
+        </rect>
+
+        <!-- Угловые маркеры сцены -->
+        <rect x="16" y="52" width="18" height="2" fill="#1A7A85" opacity="0.6"/>
+        <rect x="16" y="52" width="2" height="18" fill="#1A7A85" opacity="0.6"/>
+        <rect x="446" y="52" width="18" height="2" fill="#1A7A85" opacity="0.6"/>
+        <rect x="462" y="52" width="2" height="18" fill="#1A7A85" opacity="0.6"/>
+        <rect x="16" y="318" width="18" height="2" fill="#1A7A85" opacity="0.6"/>
+        <rect x="16" y="302" width="2" height="18" fill="#1A7A85" opacity="0.6"/>
+        <rect x="446" y="318" width="18" height="2" fill="#1A7A85" opacity="0.6"/>
+        <rect x="462" y="302" width="2" height="18" fill="#1A7A85" opacity="0.6"/>
+
+        <!-- ── РАЗДЕЛИТЕЛЬ ── -->
+        <rect x="16" y="328" width="448" height="1" fill="#1A7A85" fill-opacity="0.15"/>
+
+        <!-- ── МЕТРИКИ (нижняя панель) ── -->
+        <!-- Голов -->
+        <text x="36" y="358" font-family="'Roboto Mono', monospace" font-size="9" fill="rgba(255,255,255,0.4)" letter-spacing="1.5">ГОЛОВ</text>
+        <text x="36" y="382" font-family="'Instrument Sans', sans-serif" font-size="26" font-weight="700" fill="white">247</text>
+
+        <!-- Divider -->
+        <rect x="176" y="338" width="1" height="52" fill="#1A7A85" fill-opacity="0.2"/>
+
+        <!-- FCR прогноз -->
+        <text x="196" y="358" font-family="'Roboto Mono', monospace" font-size="9" fill="rgba(255,255,255,0.4)" letter-spacing="1.5">FCR ПРОГНОЗ</text>
+        <text x="196" y="382" font-family="'Instrument Sans', sans-serif" font-size="26" font-weight="700" fill="#4FA890">2,41</text>
+
+        <!-- Divider -->
+        <rect x="316" y="338" width="1" height="52" fill="#1A7A85" fill-opacity="0.2"/>
+
+        <!-- Алерты -->
+        <text x="336" y="358" font-family="'Roboto Mono', monospace" font-size="9" fill="rgba(255,255,255,0.4)" letter-spacing="1.5">АЛЕРТЫ</text>
+        <text x="336" y="382" font-family="'Instrument Sans', sans-serif" font-size="26" font-weight="700" fill="#D97757">1</text>
+        <!-- alert pulse ring -->
+        <circle cx="366" cy="370" r="8" fill="none" stroke="#D97757" stroke-width="1.5" opacity="0.5">
+          <animate attributeName="r" values="8;16;8" dur="2s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.5;0;0.5" dur="2s" repeatCount="indefinite"/>
+        </circle>
+
+        <!-- ── MINI CHART ── -->
+        <rect x="16" y="400" width="448" height="1" fill="#1A7A85" fill-opacity="0.12"/>
+
+        <!-- Chart label -->
+        <text x="36" y="422" font-family="'Roboto Mono', monospace" font-size="8.5" fill="rgba(255,255,255,0.35)" letter-spacing="1.2">АКТИВНОСТЬ ГРУПП · 24Ч</text>
+
+        <!-- Bars -->
+        <g transform="translate(36, 445)">
+          <!-- bar heights out of max 22px -->
+          <rect x="0"   y="-10" width="14" height="10" rx="2" fill="url(#barGrad1)" opacity="0.7"/>
+          <rect x="18"  y="-15" width="14" height="15" rx="2" fill="url(#barGrad1)" opacity="0.8"/>
+          <rect x="36"  y="-12" width="14" height="12" rx="2" fill="url(#barGrad1)" opacity="0.75"/>
+          <rect x="54"  y="-18" width="14" height="18" rx="2" fill="url(#barGrad2)"/>
+          <rect x="72"  y="-20" width="14" height="20" rx="2" fill="url(#barGrad2)"/>
+          <rect x="90"  y="-16" width="14" height="16" rx="2" fill="url(#barGrad2)" opacity="0.9"/>
+          <rect x="108" y="-22" width="14" height="22" rx="2" fill="#1A7A85"/>
+          <rect x="126" y="-19" width="14" height="19" rx="2" fill="url(#barGrad2)"/>
+          <rect x="144" y="-14" width="14" height="14" rx="2" fill="url(#barGrad1)" opacity="0.8"/>
+          <rect x="162" y="-17" width="14" height="17" rx="2" fill="url(#barGrad2)" opacity="0.9"/>
+          <rect x="180" y="-21" width="14" height="21" rx="2" fill="#1A7A85" opacity="0.9"/>
+          <rect x="198" y="-13" width="14" height="13" rx="2" fill="url(#barGrad1)" opacity="0.7"/>
+          <!-- alert bar -->
+          <rect x="216" y="-8"  width="14" height="8"  rx="2" fill="#D97757" opacity="0.8"/>
+          <rect x="234" y="-15" width="14" height="15" rx="2" fill="url(#barGrad2)" opacity="0.85"/>
+          <rect x="252" y="-18" width="14" height="18" rx="2" fill="url(#barGrad2)"/>
+          <rect x="270" y="-20" width="14" height="20" rx="2" fill="#1A7A85"/>
+          <rect x="288" y="-16" width="14" height="16" rx="2" fill="url(#barGrad2)"/>
+          <rect x="306" y="-22" width="14" height="22" rx="2" fill="#4FA890"/>
+          <rect x="324" y="-17" width="14" height="17" rx="2" fill="url(#barGrad2)" opacity="0.9"/>
+          <rect x="342" y="-19" width="14" height="19" rx="2" fill="url(#barGrad2)"/>
+          <rect x="360" y="-14" width="14" height="14" rx="2" fill="url(#barGrad1)" opacity="0.8"/>
+          <rect x="378" y="-21" width="14" height="21" rx="2" fill="#1A7A85" opacity="0.85"/>
+          <rect x="396" y="-18" width="14" height="18" rx="2" fill="url(#barGrad2)"/>
+        </g>
+
+        <!-- Trend line (SVG polyline поверх баров) -->
+        <polyline
+          points="43,435 61,430 79,433 97,427 115,425 133,429 151,423 169,426 187,431 205,428 223,438 241,430 259,432 277,425 295,423 313,427 331,424 349,426 367,429 385,424 403,427 421,425 439,430 457,427"
+          fill="none" stroke="#73B9BF" stroke-width="1.5" stroke-opacity="0.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+      </svg>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ ПОЛОСА ДОВЕРИЯ / СЕКТОРА ============ -->
+<section class="trust-bar">
+  <div class="container trust-bar__inner">
+
+    <div class="trust-bar__items">
+      <span class="trust-bar__item">🥚 Яичное производство</span>
+      <span class="trust-bar__item">🐔 Бройлерное птицеводство</span>
+      <span class="trust-bar__item">🐖 Свиноводство</span>
+      <span class="trust-bar__item">🐄 КРС · молочное и мясное</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ПРОБЛЕМА → РЕШЕНИЕ ============ -->
+<section class="section problem-block">
+  <div class="container">
+    <div class="problem-block__head reveal">
+      <span class="eyebrow">Что меняет AgVisio</span>
+      <!-- H2 заточен под запрос "цифровизация животноводства" -->
+      <h2>Цифровизация животноводства&nbsp;— без перестройки производства</h2>
+      <p>Три типовые проблемы агрохолдинга, которые решает компьютерное зрение. Без увеличения штата сотрудников и без замены имеющегося оборудования.</p>
+    </div>
+
+    <div class="problem-grid">
+      <div class="problem-card reveal">
+        <div class="problem-card__num">01 · ПОТЕРИ</div>
+        <div class="problem-card__problem">Болезни видны, когда уже поздно лечить</div>
+        <p style="color: var(--ink-60); font-size: 14px; line-height: 1.55;">
+          Сотрудник не может ежедневно осмотреть тысячи голов. Хромая корова, вялый бройлер, поросёнок без аппетита — всё это замечают слишком поздно. Падёж 5–8% становится «нормой».
+        </p>
+        <hr class="problem-card__hr">
+        <span class="problem-card__solution-label">→ С AgVisio</span>
+        <p class="problem-card__solution">
+          Ранняя детекция аномалий поведения за <strong>несколько дней</strong> до видимых симптомов..
+        </p>
+      </div>
+
+      <div class="problem-card reveal" style="transition-delay: 0.1s;">
+        <div class="problem-card__num">02 · КОРМА</div>
+        <div class="problem-card__problem">Корм — 70% себестоимости, но летит «вслепую»</div>
+        <p style="color: var(--ink-60); font-size: 14px; line-height: 1.55;">
+          Без точного веса каждой партии переход между фазами рациона делается по календарю, а не по факту. Лишний день на финишере = тонны корма без прироста.
+        </p>
+        <hr class="problem-card__hr">
+        <span class="problem-card__solution-label">→ С AgVisio</span>
+        <p class="problem-card__solution">
+          Бесконтактное взвешивание по видео ежедневно. Улучшение FCR на 0,1 единицы = <strong>284 ₽</strong> на товарную свинью или 5–8% роста прибыли бройлерного производителя.
+        </p>
+      </div>
+
+      <div class="problem-card reveal" style="transition-delay: 0.2s;">
+        <div class="problem-card__num">03 · Стресс</div>
+        <div class="problem-card__problem">Снижение падежа и стресса</div>
+        <p style="color: var(--ink-60); font-size: 14px; line-height: 1.55;">
+          Минимизация контактов человека с животными. Стресс животных при взвешивании — это ещё минус привес.
+        </p>
+        <hr class="problem-card__hr">
+        <span class="problem-card__solution-label">→ С AgVisio</span>
+        <p class="problem-card__solution">
+          Автоматический подсчёт с точностью <strong>99,9%</strong> при перегоне и отгрузке. Неинвазивное взвешивание. Стресс животных от взвешивания убран полностью.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ РЕШЕНИЯ ПО ОТРАСЛЯМ ============ -->
+<section class="section industries" id="solutions">
+  <div class="container">
+    <div class="industries__head reveal">
+      <div>
+        <span class="eyebrow">Решения по отраслям</span>
+        <!-- H2 под запросы "видеоаналитика для птицефабрики", "AI для свинокомплекса" -->
+        <h2>ИИ-видеоаналитика для птицефабрик, свинокомплексов и КРС</h2>
+      </div>
+      <p>Каждая отрасль — собственный набор моделей, метрик и сценариев. Мы адаптируемся под ваши процессы, а не наоборот.</p>
+    </div>
+
+    <div class="industries__tabs">
+      <button class="tab active" data-tab="egg">🥚 Яичное производство</button>
+      <button class="tab" data-tab="poultry">🐔 Бройлерное птицеводство</button>
+      <button class="tab" data-tab="pigs">🐖 Свиноводство</button>
+      <button class="tab" data-tab="cattle">🐄 КРС · молочное / мясное</button>
+    </div>
+
+    <!-- ЯИЧНОЕ ПРОИЗВОДСТВО -->
+    <div class="industry-panel" data-panel="egg">
+      <div class="industry-panel__left">
+        <span class="industry-panel__tag">ЯИЧНОЕ · НЕСУШКИ</span>
+        <h3 class="industry-panel__title">Видеоаналитика для яичного производства</h3>
+        <p class="industry-panel__desc">
+          Несушки в клеточных и напольных системах — длинный цикл, высокая плотность, критичность стресса. AgVisio контролирует поведение групп животных, падёж. Раннее выявление стресса и болезней снижает потери и поддерживает стабильную продуктивность на протяжении всего цикла.
+        </p>
+        <div class="industry-panel__stats">
+          <div class="ipstat">
+            <div class="ipstat__value"><em>−10%</em></div>
+            <div class="ipstat__label">снижение падежа несушек</div>
+          </div>
+          <div class="ipstat">
+            <div class="ipstat__value"><em>+2%</em></div>
+            <div class="ipstat__label">яйценоскость на голову</div>
+          </div>
+          <div class="ipstat">
+            <div class="ipstat__value"><em>24/7</em></div>
+            <div class="ipstat__label">мониторинг без персонала</div>
+          </div>
+
+        </div>
+      </div>
+      <div class="industry-panel__right">
+        <div class="feature-row">
+          <div class="feature-row__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8 2 5 6 5 10c0 5 7 12 7 12s7-7 7-12c0-4-3-8-7-8z"/></svg>
+          </div>
+          <div>
+            <div class="feature-row__title">Подсчёт яиц</div>
+            <div class="feature-row__desc">Автоматический учёт снесённых яиц по секциям. Отклонение от нормы — немедленный алерт сотруднику.</div>
+          </div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-row__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          </div>
+          <div>
+            <div class="feature-row__title">Детекция стресса и болезней</div>
+            <div class="feature-row__desc">Анализ поведения групп животных: скученность, отказ от корма, нарушения активности — признаки болезни за 48 ч до симптомов.</div>
+          </div>
+        </div>
+        
+        <div class="feature-row">
+          <div class="feature-row__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <div>
+            <div class="feature-row__title">Аналитика продуктивности</div>
+            <div class="feature-row__desc">Сравнение секций, корпусов и партий. Тренды по неделям и циклам для управленческих решений.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ПТИЦЕВОДСТВО -->
+    <div class="industry-panel" data-panel="poultry">
+      <div class="industry-panel__left">
+        <span class="industry-panel__tag">PRIORITY · 2026</span>
+        <h3 class="industry-panel__title">Видеоаналитика для бройлерных птицефабрик</h3>
+        <p class="industry-panel__desc">
+          Цикл 38–42 дня, миллионы голов в обороте, корма — 70% себестоимости. AgVisio контролирует FCR, равномерность групп животных, падёж и точку оптимальной отгрузки. На комплексе 30 млн голов в год экономия достигает более 400 млн ₽.
+        </p>
+        <div class="industry-panel__stats">
+          <div class="ipstat">
+            <div class="ipstat__value"><em>18 900 ₽</em></div>
+            <div class="ipstat__label">/1000 голов за цикл</div>
+          </div>
+          <div class="ipstat">
+            <div class="ipstat__value"><em>+3–7%</em></div>
+            <div class="ipstat__label">снижение себестоимости</div>
+          </div>
+          <div class="ipstat">
+            <div class="ipstat__value"><em>−1–2 п.п.</em></div>
+            <div class="ipstat__label">падёж за цикл</div>
+          </div>
+          <div class="ipstat">
+            <div class="ipstat__value"><em>97+%</em></div>
+            <div class="ipstat__label">точность CV моделей</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="industry-panel__right">
+        <div class="feature-row">
+          <div class="feature-row__icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke-width="1.6">
+              <path d="M3 12h3l3-7 4 14 3-7h5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="feature-row__title">Контроль FCR в реальном времени</div>
+            <div class="feature-row__text">Бесконтактное взвешивание птицы и корреляция с потреблением корма. Сигнал для смены фазы рациона — не по календарю, а по достижению критериев.</div>
+          </div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-row__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">
+              <path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2 2M16.4 16.4l2 2M5.6 18.4l2-2M16.4 7.6l2-2" stroke="currentColor" stroke-linecap="round"/>
+              <circle cx="12" cy="12" r="3" stroke="currentColor"/>
+            </svg>
+          </div>
+          <div>
+            <div class="feature-row__title">Детекция вялых и больных особей</div>
+            <div class="feature-row__text">Анализ паттернов движения и распределения по птичнику. Раннее выявление заболеваний, теплового стресса.</div>
+          </div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-row__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">
+              <rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor"/>
+              <path d="M3 9h18M8 4v16" stroke="currentColor"/>
+            </svg>
+          </div>
+          <div>
+            <div class="feature-row__title">Точка оптимальной отгрузки</div>
+            <div class="feature-row__text">Система оценивает однородность и вес группы ежедневно.</div>
+          </div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-row__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">
+              <path d="M21 12c-2 0-3-2-3-2s-1 2-3 2-3-2-3-2-1 2-3 2-3-2-3-2-1 2-3 2" stroke="currentColor" stroke-linecap="round"/>
+              <path d="M21 17c-2 0-3-2-3-2s-1 2-3 2-3-2-3-2-1 2-3 2-3-2-3-2-1 2-3 2" stroke="currentColor" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="feature-row__title">Контроль микроклимата по поведению групп животных</div>
+            <div class="feature-row__text">Скучивание, пассивность, каннибализм. AI распознаёт паттерны и отправляет в систему.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- СВИНОВОДСТВО -->
+    <div class="industry-panel" data-panel="pigs">
+      <div class="industry-panel__left">
+        <span class="industry-panel__tag">PRIORITY · 2026</span>
+        <h3 class="industry-panel__title">Компьютерное зрение для свинокомплексов</h3>
+        <p class="industry-panel__desc">
+          Цикл откорма 5–6 месяцев, корма — 70% себестоимости.
+          AgVisio контролирует прирост, кормоконверсию и обеспечивает точный учёт при перегоне и отгрузке. Окупаемость — 6–9 месяцев.
+        </p>
+        <div class="industry-panel__stats">
+          <div class="ipstat">
+            <div class="ipstat__value"><em>~567 ₽</em></div>
+            <div class="ipstat__label">/свинья за цикл</div>
+          </div>
+          <div class="ipstat">
+            <div class="ipstat__value"><em>99,9%</em></div>
+            <div class="ipstat__label">точность подсчёта</div>
+          </div>
+          <div class="ipstat">
+            <div class="ipstat__value"><em>−0,5–1,5 п.п.</em></div>
+            <div class="ipstat__label">падёж</div>
+          </div>
+          <div class="ipstat">
+            <div class="ipstat__value"><em>113 млн ₽</em></div>
+            <div class="ipstat__label">/200 тыс. голов в год</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="industry-panel__right">
+        <div class="feature-row">
+          <div class="feature-row__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">
+              <path d="M4 16l4-4 4 3 4-6 4 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M4 20h16" stroke="currentColor" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="feature-row__title">Бесконтактное взвешивание поросят</div>
+            <div class="feature-row__text">Точность более 95% без индивидуального взвешивания. Камера над станком фиксирует прирост ежедневно — без стресса для животных.</div>
+          </div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-row__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">
+              <path d="M9 11l3 3 8-8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M20 12v6a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h9" stroke="currentColor" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="feature-row__title">Автоматический учёт при перегоне</div>
+            <div class="feature-row__text">99,9% точность пересчёта при движении через коридор. Минимизация человеческого фактора и прозрачность при приёмке на убой.</div>
+          </div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-row__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">
+              <circle cx="12" cy="12" r="9" stroke="currentColor"/>
+              <path d="M12 7v5l3 2" stroke="currentColor" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="feature-row__title">Своевременная отгрузка</div>
+            <div class="feature-row__text">Финишер выше 127 кг начинает превращать корм в жир, а не в мышцы. Каждый лишний день = 2,8–3,2 кг корма на голову без выручки.</div>
+          </div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-row__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">
+              <path d="M12 2L4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6l-8-4z" stroke="currentColor" stroke-linejoin="round"/>
+              <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="feature-row__title">Здоровье свиней</div>
+            <div class="feature-row__text">Анализ поведения — лежка, потребление воды, активность, поза сидячей собаки.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- КРС -->
+    <div class="industry-panel" data-panel="cattle">
+      <div class="industry-panel__left">
+        <span class="industry-panel__tag">DAIRY · BEEF</span>
+        <h3 class="industry-panel__title">Видеоаналитика для молочного и мясного КРС</h3>
+        <p class="industry-panel__desc">
+          Корова в активе 3–5 лет, главный убыток — хромота. AgVisio детектирует её за несколько дней до визуальных симптомов и сохраняет удой, репродукцию, поголовье.
+        </p>
+        <div class="industry-panel__stats">
+          <div class="ipstat">
+            <div class="ipstat__value"><em>26 460 ₽</em></div>
+            <div class="ipstat__label">/корова в год</div>
+          </div>
+          <div class="ipstat">
+            <div class="ipstat__value"><em>×4</em></div>
+            <div class="ipstat__label">снижение тяжёлой хромоты</div>
+          </div>
+          <div class="ipstat">
+            <div class="ipstat__value"><em>×10</em></div>
+            <div class="ipstat__label">ROI клиента</div>
+          </div>
+          <div class="ipstat">
+            <div class="ipstat__value"><em>26,5 млн ₽</em></div>
+            <div class="ipstat__label">/ферма 1000 голов</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="industry-panel__right">
+        <div class="feature-row">
+          <div class="feature-row__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">
+              <path d="M5 21l3-9h8l3 9M9 12V8a3 3 0 016 0v4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="feature-row__title">Раннее выявление хромоты</div>
+            <div class="feature-row__text">Хромая корова даёт на 5–15% меньше молока. AI распознаёт изменения походки за несколько дней до того, как их увидит сотрудник.</div>
+          </div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-row__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">
+              <circle cx="12" cy="12" r="9" stroke="currentColor"/>
+              <path d="M12 8v4M12 16h.01" stroke="currentColor" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="feature-row__title">Контроль активности и эструса</div>
+            <div class="feature-row__text">Хромая корова хуже приходит в охоту. Удлинение сервис-периода на 30–60 дней — это 7 560 ₽ потерь на корову. AgVisio удерживает репродуктивный цикл в норме.</div>
+          </div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-row__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">
+              <path d="M3 17l6-6 4 4 8-8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M14 7h7v7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="feature-row__title">Сохранение удоя и поголовья</div>
+            <div class="feature-row__text">Замена коровы стоит 126 000–189 000 ₽. Сохранение 2–3% стада в год через раннее лечение даёт заметный эффект на крупных молочных хозяйствах.</div>
+          </div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-row__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">
+              <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor"/>
+              <path d="M3 9h18M9 21V9" stroke="currentColor"/>
+            </svg>
+          </div>
+          <div>
+            <div class="feature-row__title">Интеграция с системами учёта</div>
+            <div class="feature-row__text">События AgVisio падают в ваши системы. Сотруднику не нужно работать в отдельной системе — данные приходят туда, где он уже работает.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ КАК РАБОТАЕТ ============ -->
+<section class="section how" id="how">
+  <div class="container">
+    <div class="how__head reveal">
+      <span class="eyebrow eyebrow--light">Технология</span>
+      <h2>Как работает компьютерное зрение AgVisio</h2>
+      <p>Четыре этапа от установки до управленческого решения. Без перестройки производства и замены оборудования.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step__num">01 · CAPTURE</div>
+        <div class="step__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">
+            <rect x="3" y="6" width="18" height="13" rx="2" stroke="white"/>
+            <circle cx="12" cy="12.5" r="3.5" stroke="white"/>
+          </svg>
+        </div>
+        <div class="step__title">Камеры на производстве</div>
+        <div class="step__text">IP-камеры в корпусах. Используем существующее оборудование там, где это возможно. Edge-устройство передаёт поток в систему.</div>
+      </div>
+      <div class="step reveal" style="transition-delay: 0.1s;">
+        <div class="step__num">02 · ANALYZE</div>
+        <div class="step__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">
+            <circle cx="12" cy="12" r="3" stroke="white"/>
+            <path d="M12 4v3M12 17v3M4 12h3M17 12h3M6 6l2 2M16 16l2 2M6 18l2-2M16 8l2-2" stroke="white" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="step__title">Нейросети распознают</div>
+        <div class="step__text">Обученные модели CV считают животных, оценивают вес, определяют поведенческие паттерны и аномалии. Точность 98,7%, latency &lt;120ms.</div>
+      </div>
+      <div class="step reveal" style="transition-delay: 0.2s;">
+        <div class="step__num">03 · INTEGRATE</div>
+        <div class="step__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">
+            <path d="M9 7H6a3 3 0 00-3 3v4a3 3 0 003 3h3M15 7h3a3 3 0 013 3v4a3 3 0 01-3 3h-3M9 12h6" stroke="white" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="step__title">Интеграция с 1С и ERP</div>
+        <div class="step__text">Данные попадают в учётную систему хозяйства. Сотрудник работает в привычном интерфейсе — отдельный «AI-кабинет» не нужен.</div>
+      </div>
+      <div class="step reveal" style="transition-delay: 0.3s;">
+        <div class="step__num">04 · ACT</div>
+        <div class="step__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">
+            <path d="M5 12l5 5L20 7" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="step__title">Управленческие решения</div>
+        <div class="step__text">Алерты в мессенджеры, e-mail и SMS, отчёты для руководителя, рекомендации для сотрудника. Всё критичное — на одном экране.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ЭКОНОМИКА ============ -->
+<section class="section economics" id="economics">
+  <div class="container">
+    <div class="economics__head reveal">
+      <span class="eyebrow">Экономический эффект</span>
+      <!-- H2 оптимизирован под "окупаемость", "ROI", "экономическая эффективность" -->
+      <h2>Экономика внедрения: цифры по трём отраслям</h2>
+      <p>Главный источник эффекта одинаков везде — корма (50–70% себестоимости). Но единица расчёта и масштаб экономии у каждой отрасли свой.</p>
+    </div>
+
+    <div class="eco-grid">
+      <div class="eco-card reveal">
+        <div class="eco-card__type">Бройлерное птицеводство</div>
+        <div class="eco-card__title">Птицефабрика на 30 млн голов в год</div>
+        <div class="eco-card__sub">6–7 циклов по 38–42 дня</div>
+
+        <div class="eco-card__big">более 400&nbsp;млн ₽</div>
+        <div class="eco-card__big-label">экономия на комплекс в год</div>
+
+        <ul>
+          <li>Улучшение FCR — 8 820 ₽ / 1000 голов</li>
+          <li>Снижение падежа — 5 040 ₽ / 1000 голов</li>
+          <li>Точка отгрузки — 3 150 ₽ / 1000 голов</li>
+          <li>ФОТ и антибиотики — 1 890 ₽ / 1000 голов</li>
+        </ul>
+
+        <div class="eco-card__payback">
+          Окупаемость
+          <strong>3–9 месяцев</strong>
+        </div>
+      </div>
+
+      <div class="eco-card eco-card--featured reveal" style="transition-delay: 0.1s;">
+        <div class="eco-card__type">Свиноводство</div>
+        <div class="eco-card__title">Свинокомплекс 200 тыс. голов в год</div>
+        <div class="eco-card__sub">Цикл откорма 5–6 месяцев</div>
+
+        <div class="eco-card__big">113&nbsp;млн ₽</div>
+        <div class="eco-card__big-label">экономия на комплекс в год</div>
+
+        <ul>
+          <li>Улучшение FCR — 252 ₽ / голову</li>
+          <li>Своевременная отгрузка — 158 ₽ / голову</li>
+          <li>Снижение падежа и стресса — 95 ₽ / голову</li>
+          <li>Точный учёт и ФОТ — 63 ₽ / голову</li>
+        </ul>
+
+        <div class="eco-card__payback">
+          Окупаемость
+          <strong>3–9 месяцев</strong>
+        </div>
+      </div>
+
+      <div class="eco-card reveal" style="transition-delay: 0.2s;">
+        <div class="eco-card__type">Молочный КРС</div>
+        <div class="eco-card__title">Ферма на 1000 коров</div>
+        <div class="eco-card__sub">Корова в активе 3–5 лет</div>
+
+        <div class="eco-card__big">26,5&nbsp;млн ₽</div>
+        <div class="eco-card__big-label">экономия на ферму в год</div>
+
+        <ul>
+          <li>Сохранённый удой — 9 450 ₽ / корову</li>
+          <li>Сокращение сервис-периода — 7 560 ₽ / корову</li>
+          <li>Снижение затрат на лечение — 5 670 ₽ / корову</li>
+          <li>Меньше выбраковки — 3 780 ₽ / корову</li>
+        </ul>
+
+        <div class="eco-card__payback">
+          Окупаемость
+          <strong>12–18 месяцев</strong>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 32px; padding: 20px 24px; background: white; border-radius: 10px; border: 1px solid var(--mist); font-size: 13px; color: var(--ink-60); line-height: 1.6;">
+      <strong style="color: var(--brand-blue);">Источники данных:</strong> Отраслевые исследования и данные российских внедрений.
+    </div>
+  </div>
+</section>
+
+<!-- ============ СРАВНЕНИЕ ============ -->
+<section class="section compare">
+  <div class="container">
+    <div class="compare__head reveal">
+      <span class="eyebrow">До → После</span>
+      <h2>Что меняется на производстве после внедрения</h2>
+    </div>
+
+    <div class="compare-table reveal">
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 32%;">Параметр</th>
+            <th>Без AgVisio</th>
+            <th>С AgVisio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Подсчёт поголовья</td>
+            <td class="col-old">Ручной, погрешность 2–3%</td>
+            <td class="col-new">Автоматический, 99,9%</td>
+          </tr>
+          <tr>
+            <td>Взвешивание</td>
+            <td class="col-old">Раз в 1–2 недели, стресс животных</td>
+            <td class="col-new">Ежедневно, бесконтактно</td>
+          </tr>
+          <tr>
+            <td>Детекция болезни</td>
+            <td class="col-old">По визуальным симптомам</td>
+            <td class="col-new">За несколько дней до симптомов</td>
+          </tr>
+          <tr>
+            <td>Управление кормами</td>
+            <td class="col-old">По календарному плану</td>
+            <td class="col-new">По фактическому весу и FCR</td>
+          </tr>
+          <tr>
+            <td>Алерты по аномалиям</td>
+            <td class="col-old">Сотрудник на обходе</td>
+            <td class="col-new">Push-уведомление за минуты</td>
+          </tr>
+          <tr>
+            <td>Падёж за цикл</td>
+            <td class="col-old">5–8% (бройлеры)</td>
+            <td class="col-new">3–5% — снижение на 1–2 п.п.</td>
+          </tr>
+          <tr>
+            <td>Отчётность для руководителя</td>
+            <td class="col-old">Раз в неделю, Excel</td>
+            <td class="col-new">Live-дашборд 24/7</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SLA / УСЛОВИЯ ============ -->
+<section class="section sla">
+  <div class="container">
+    <div style="max-width: 760px; margin-bottom: 56px;" class="reveal">
+      <span class="eyebrow">Условия работы</span>
+      <h2>Что входит в проект</h2>
+    </div>
+
+    <div class="sla-grid">
+      <div class="sla-card reveal">
+        <div class="sla-card__value">4 нед.</div>
+        <div class="sla-card__title">Внедрение</div>
+        <div class="sla-card__text">От подписания договора до старта мониторинга. Без остановки производства.</div>
+      </div>
+      <div class="sla-card reveal" style="transition-delay: 0.05s;">
+        <div class="sla-card__value">99,99%</div>
+        <div class="sla-card__title">Uptime</div>
+        <div class="sla-card__text">Непрерывный мониторинг 24/7. SLA закреплён в договоре.</div>
+      </div>
+      <div class="sla-card reveal" style="transition-delay: 0.1s;">
+        <div class="sla-card__value">24/7</div>
+        <div class="sla-card__title">Поддержка</div>
+        <div class="sla-card__text">Инженеры на связи круглосуточно. Удалённое обслуживание моделей.</div>
+      </div>
+      <div class="sla-card reveal" style="transition-delay: 0.15s;">
+        <div class="sla-card__value">1С · ERP</div>
+        <div class="sla-card__title">Интеграция</div>
+        <div class="sla-card__text">Готовые коннекторы к учётным системам. Данные — туда, где сотрудник уже работает.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section faq" id="faq">
+  <div class="container">
+    <div class="faq__inner">
+      <div class="faq__head reveal">
+        <span class="eyebrow">Частые вопросы</span>
+        <!-- H2 под голосовой поиск + AI-сниппеты -->
+        <h2>Ответы на ключевые вопросы агрохолдингов</h2>
+        <p>Если вашего вопроса нет в списке — напишите на <a href="mailto:sale@inline-ltd.ru" style="color: var(--brand-teal);">sale@inline-ltd.ru</a> или позвоните напрямую инженерам.</p>
+      </div>
+
+      <div class="faq__list">
+        <details class="faq-item" open>
+          <summary>
+            Что такое компьютерное зрение в животноводстве?
+            <span class="faq-item__icon">
+              <svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </summary>
+          <div class="faq-item__body">
+            <p>Компьютерное зрение в животноводстве — это технология, которая с помощью камер и нейросетей автоматически анализирует поведение, вес, состояние здоровья и численность животных без участия персонала.</p>
+            <p>AgVisio использует обученные модели CV для четырёх отраслей: яичного производства, бройлерного птицеводства, свиноводства и молочного / мясного КРС. Каждый модуль адаптирован под отраслевую специфику — сценарии распознавания, метрики и интеграцию с отраслевым ПО.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            Сколько стоит внедрение на свинокомплекс или птицефабрику?
+            <span class="faq-item__icon">
+              <svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </summary>
+          <div class="faq-item__body">
+            <p>Стоимость рассчитывается индивидуально после аудита производства. Цена зависит от количества корпусов, числа камер, требуемой глубины аналитики и объёмов поголовья.</p>
+            <p>Типичная окупаемость: бройлерный комплекс — 3–9 месяцев, свинокомплекс — 3–9 месяцев, молочная ферма — 12–18 месяцев. Государственные программы, гранты субсидируют пилотные внедрения.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            Нужно ли менять оборудование для внедрения AgVisio?
+            <span class="faq-item__icon">
+              <svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </summary>
+          <div class="faq-item__body">
+            <p>Нет. AgVisio работает с существующими IP-камерами там, где это возможно, и интегрируется с действующими системами учёта.</p>
+            <p>Перестройка корпусов или замена оборудования не требуется. Если нужна докомплектация — установим точечно. Типовое время полного внедрения — 4 недели без остановки производства.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            Какая точность распознавания у моделей AgVisio?
+            <span class="faq-item__icon">
+              <svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </summary>
+          <div class="faq-item__body">
+            <p>Базовые показатели: точность распознавания моделей — 98,7%, точность подсчёта при перегоне — 99,9%, latency обработки — менее 120 мс. Uptime системы — 99,99%.</p>
+            <p>Точность бесконтактного взвешивания: свиньи — более 95%, бройлеры — 97+% точность. Это сопоставимо с ручной выборкой и доступно ежедневно, а не раз в неделю.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            Что входит в эффект «−18% потерь поголовья»?
+            <span class="faq-item__icon">
+              <svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </summary>
+          <div class="faq-item__body">
+            <p>Снижение потерь складывается из трёх компонентов: ранняя детекция заболеваний (за несколько дней до симптомов), снижение преждевременной выбраковки и уменьшение падежа от тепловых стрессов и аномалий микроклимата.</p>
+            <p>У бройлеров CV-модели дают 96+% точности детекции больных особей — это даёт минус 1–2 п.п. падежа за цикл.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            Кто разработчик и кто отвечает за проект?
+            <span class="faq-item__icon">
+              <svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </summary>
+          <div class="faq-item__body">
+            <p>Разработчик AgVisio — компания «Инлайн». Проект сопровождают инженеры компьютерного зрения, отраслевой консультант и проектный менеджер.</p>
+            <p>Контакты для связи: телефон <a href="tel:+78124253265" style="color: var(--brand-teal);">+7 (812) 425-32-65</a>, e-mail <a href="mailto:sale@inline-ltd.ru" style="color: var(--brand-teal);">sale@inline-ltd.ru</a>.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            Можно ли начать с пилота на одном корпусе?
+            <span class="faq-item__icon">
+              <svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </summary>
+          <div class="faq-item__body">
+            <p>Да, рекомендуем именно такой формат. Стандартный путь: пилот на 1 корпусе или 1 птичнике → измеряемый эффект через 2–3 цикла → масштабирование на всю площадку.</p>
+            <p>В рамках пилота фиксируем baseline-метрики (текущий FCR, падёж, точность учёта) и через 2–3 месяца сравниваем. Договор содержит KPI и условия отказа.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ ТАРИФЫ ============ -->
+<section class="section pricing" id="pricing">
+  <div class="container">
+    <div class="pricing__head reveal">
+      <span class="eyebrow">Тарифы</span>
+      <!-- H2 под запрос "стоимость видеоаналитики для свинокомплекса", "цена компьютерного зрения для фермы" -->
+      <h2>Прозрачная цена за&nbsp;голову, без&nbsp;скрытых платежей</h2>
+      <p>Подписочная модель: платите только за активный мониторинг. На&nbsp;20% дешевле западных аналогов в&nbsp;пересчёте по курсу ЦБ. Все цены — в рублях, НДС включён.</p>
+    </div>
+
+    <!-- Переключатель отраслей -->
+    <div class="pricing__switcher reveal">
+      <button class="pricing__switch-btn active" data-pricing="poultry">🐔 Птицеводство</button>
+      <button class="pricing__switch-btn" data-pricing="pigs">🐖 Свиноводство</button>
+      <button class="pricing__switch-btn" data-pricing="cattle">🐄 КРС</button>
+    </div>
+
+    <!-- ПТИЦЕВОДСТВО — за птичник -->
+    <div class="pricing-tier-group active" data-pricing-group="poultry">
+      <div class="tier reveal">
+        <div class="tier__name">Старт</div>
+        <div class="tier__title">Для одного птичника</div>
+        <div class="tier__desc">Пилот на 1 корпусе до 20 000 голов. Базовая аналитика групп животных.</div>
+
+        <div class="tier__price">
+          <span class="tier__price-value">12 900</span>
+          <span class="tier__price-currency">₽</span>
+          <span class="tier__price-period">/птичник&nbsp;в&nbsp;месяц</span>
+        </div>
+        <div class="tier__price-old">~16 100 ₽ у западных аналогов <strong>−20%</strong></div>
+
+        <hr class="tier__divider">
+        <div class="tier__includes-label">Что входит</div>
+        <ul>
+          <li>Подсчёт групп животных в реальном времени (точность 96%+)</li>
+          <li>Бесконтактное взвешивание по видео (базовая оценка веса)</li>
+          <li>Контроль распределения по птичнику</li>
+          <li>Базовые алерты: скучивание, тепловой стресс</li>
+          <li>До 4 IP-камер на корпус</li>
+          <li>Веб-дашборд + мобильное приложение</li>
+          <li>Поддержка по e-mail</li>
+        </ul>
+
+        <a href="#contact" class="btn btn--ghost btn--lg tier__btn">Запросить расчёт</a>
+      </div>
+
+      <div class="tier tier--featured reveal" style="transition-delay: 0.1s;">
+        <div class="tier__badge">Популярный</div>
+        <div class="tier__name">Бизнес</div>
+        <div class="tier__title">Птицефабрика до 6 птичников</div>
+        <div class="tier__desc">Полный комплект CV-аналитики для среднего комплекса до 250&nbsp;000&nbsp;голов.</div>
+
+        <div class="tier__price">
+          <span class="tier__price-value">10 400</span>
+          <span class="tier__price-currency">₽</span>
+          <span class="tier__price-period">/птичник&nbsp;в&nbsp;месяц</span>
+        </div>
+        <div class="tier__price-old">~13 000 ₽ у конкурентов <strong>−20%</strong></div>
+
+        <hr class="tier__divider">
+        <div class="tier__includes-label">Включено всё из «Старт» плюс</div>
+        <ul>
+          <li>FCR-прогноз и оценка веса групп животных по видео</li>
+          <li>Точка оптимальной отгрузки</li>
+          <li>Детекция вялых и больных особей</li>
+          <li>Контроль микроклимата по поведению</li>
+          <li>Интеграция с вашими системами учёта</li>
+          <li>Push-алерты в мессенджеры, SMS</li>
+          <li>Поддержка 24/7 по телефону</li>
+        </ul>
+
+        <a href="#contact" class="btn btn--primary btn--lg tier__btn">Заявка на демо</a>
+      </div>
+
+      <div class="tier reveal" style="transition-delay: 0.2s;">
+        <div class="tier__name">Холдинг</div>
+        <div class="tier__title">Сеть площадок 7+ птичников</div>
+        <div class="tier__desc">Корпоративное решение для крупных агрохолдингов и сетей.</div>
+
+        <div class="tier__price">
+          <span class="tier__price-value">по&nbsp;запросу</span>
+        </div>
+        <div class="tier__price-old">от ~8 200 ₽ /птичник /мес</div>
+
+        <hr class="tier__divider">
+        <div class="tier__includes-label">Включено всё из «Бизнес» плюс</div>
+        <ul>
+          <li>Единый дашборд по всем площадкам</li>
+          <li>Сравнительная аналитика «фабрика к фабрике»</li>
+          <li>API для интеграции с корпоративными BI</li>
+          <li>Кастомные ML-модели под ваши процессы</li>
+          <li>Выделенный технический менеджер</li>
+          <li>SLA 99,99% с финансовыми гарантиями</li>
+          <li>On-premise развёртывание (по запросу)</li>
+        </ul>
+
+        <a href="#contact" class="btn btn--ghost btn--lg tier__btn">Связаться с продажами</a>
+      </div>
+    </div>
+
+    <!-- СВИНОВОДСТВО — за голову/мес -->
+    <div class="pricing-tier-group" data-pricing-group="pigs">
+      <div class="tier reveal">
+        <div class="tier__name">Старт</div>
+        <div class="tier__title">До 5 000 голов</div>
+        <div class="tier__desc">До 5 000 голов. Базовый учёт и подсчёт.</div>
+
+        <div class="tier__price">
+          <span class="tier__price-value">29</span>
+          <span class="tier__price-currency">₽</span>
+          <span class="tier__price-period">/голова&nbsp;в&nbsp;месяц</span>
+        </div>
+        <div class="tier__price-old">~36 ₽ у западных аналогов <strong>−20%</strong></div>
+
+        <hr class="tier__divider">
+        <div class="tier__includes-label">Что входит</div>
+        <ul>
+          <li>Автоматический подсчёт при перегоне (99,9%)</li>
+          <li>Базовая идентификация животных</li>
+          <li>Бесконтактное взвешивание (точность 95%+)</li>
+          <li>Детекция аномального поведения</li>
+          <li>Прогноз оптимальной точки отгрузки</li>
+          <li>Веб-дашборд + мобильное приложение</li>
+          <li>Поддержка по e-mail</li>
+          <li>Хранение данных 30 дней</li>
+        </ul>
+
+        <a href="#contact" class="btn btn--ghost btn--lg tier__btn">Запросить расчёт</a>
+      </div>
+
+      <div class="tier tier--featured reveal" style="transition-delay: 0.1s;">
+        <div class="tier__badge">Популярный</div>
+        <div class="tier__name">Бизнес</div>
+        <div class="tier__title">5 000 – 50 000 голов</div>
+        <div class="tier__desc">Свинокомплекс среднего размера. Полный комплект CV.</div>
+
+        <div class="tier__price">
+          <span class="tier__price-value">24</span>
+          <span class="tier__price-currency">₽</span>
+          <span class="tier__price-period">/голова&nbsp;в&nbsp;месяц</span>
+        </div>
+        <div class="tier__price-old">~30 ₽ у конкурентов <strong>−20%</strong></div>
+
+        <hr class="tier__divider">
+        <div class="tier__includes-label">Включено всё из «Старт» плюс</div>
+        <ul>
+          <li>Бесконтактное взвешивание (точность 95%+)</li>
+          <li>Контроль FCR и кормоконверсии</li>
+          <li>Прогноз точки оптимальной отгрузки</li>
+          <li>Детекция аномалий поведения</li>
+          <li>Здоровье свиней</li>
+          <li>Интеграция с вашими системами учёта</li>
+          <li>Push-алерты в мессенджеры, SMS</li>
+          <li>Поддержка 24/7</li>
+        </ul>
+
+        <a href="#contact" class="btn btn--primary btn--lg tier__btn">Заявка на демо</a>
+      </div>
+
+      <div class="tier reveal" style="transition-delay: 0.2s;">
+        <div class="tier__name">Холдинг</div>
+        <div class="tier__title">50 000+ голов</div>
+        <div class="tier__desc">Крупный комплекс или сеть площадок.</div>
+
+        <div class="tier__price">
+          <span class="tier__price-value">по&nbsp;запросу</span>
+        </div>
+        <div class="tier__price-old">от ~19 ₽ /голова /мес</div>
+
+        <hr class="tier__divider">
+        <div class="tier__includes-label">Включено всё из «Бизнес» плюс</div>
+        <ul>
+          <li>Единый дашборд по всем площадкам</li>
+          <li>API для интеграции с BI</li>
+          <li>Кастомные ML-модели</li>
+          <li>Выделенный технический менеджер</li>
+          <li>SLA 99,99% с финансовыми гарантиями</li>
+          <li>On-premise развёртывание</li>
+          <li>Обучение сотрудников</li>
+        </ul>
+
+        <a href="#contact" class="btn btn--ghost btn--lg tier__btn">Связаться с продажами</a>
+      </div>
+    </div>
+
+    <!-- КРС — за голову/мес -->
+    <div class="pricing-tier-group" data-pricing-group="cattle">
+      <div class="tier reveal">
+        <div class="tier__name">Старт</div>
+        <div class="tier__title">До 300 голов</div>
+        <div class="tier__desc">Небольшое хозяйство. Базовая мониторинг-аналитика.</div>
+
+        <div class="tier__price">
+          <span class="tier__price-value">109</span>
+          <span class="tier__price-currency">₽</span>
+          <span class="tier__price-period">/корова&nbsp;в&nbsp;месяц</span>
+        </div>
+        <div class="tier__price-old">~136 ₽ у западных аналогов <strong>−20%</strong></div>
+
+        <hr class="tier__divider">
+        <div class="tier__includes-label">Что входит</div>
+        <ul>
+          <li>Идентификация по уникальным признакам</li>
+          <li>Базовый mobility score</li>
+          <li>Алерты по хромоте</li>
+          <li>Веб-дашборд + мобильное приложение</li>
+          <li>Поддержка по e-mail</li>
+        </ul>
+
+        <a href="#contact" class="btn btn--ghost btn--lg tier__btn">Запросить расчёт</a>
+      </div>
+
+      <div class="tier tier--featured reveal" style="transition-delay: 0.1s;">
+        <div class="tier__badge">Популярный</div>
+        <div class="tier__name">Бизнес</div>
+        <div class="tier__title">300 – 2 000 голов</div>
+        <div class="tier__desc">Молочное или мясное хозяйство среднего размера.</div>
+
+        <div class="tier__price">
+          <span class="tier__price-value">89</span>
+          <span class="tier__price-currency">₽</span>
+          <span class="tier__price-period">/корова&nbsp;в&nbsp;месяц</span>
+        </div>
+        <div class="tier__price-old">~109 ₽ у конкурентов <strong>−20%</strong></div>
+
+        <hr class="tier__divider">
+        <div class="tier__includes-label">Включено всё из «Старт» плюс</div>
+        <ul>
+          <li>Раннее выявление хромоты (за несколько дней)</li>
+          <li>Body Condition Score (BCS)</li>
+          <li>Контроль активности и эструса</li>
+          <li>Прогноз сервис-периода</li>
+          <li>Интеграция с вашими системами учёта</li>
+          <li>Push-алерты в мессенджеры, SMS</li>
+          <li>Поддержка 24/7</li>
+        </ul>
+
+        <a href="#contact" class="btn btn--primary btn--lg tier__btn">Заявка на демо</a>
+      </div>
+
+      <div class="tier reveal" style="transition-delay: 0.2s;">
+        <div class="tier__name">Холдинг</div>
+        <div class="tier__title">2 000+ голов</div>
+        <div class="tier__desc">Крупный молочный или мясной агрохолдинг.</div>
+
+        <div class="tier__price">
+          <span class="tier__price-value">по&nbsp;запросу</span>
+        </div>
+        <div class="tier__price-old">от ~69 ₽ /корова /мес</div>
+
+        <hr class="tier__divider">
+        <div class="tier__includes-label">Включено всё из «Бизнес» плюс</div>
+        <ul>
+          <li>Единый дашборд по всем фермам</li>
+          <li>API для интеграции с BI</li>
+          <li>Кастомные ML-модели под породу</li>
+          <li>Выделенный технический менеджер</li>
+          <li>SLA 99,99% с финансовыми гарантиями</li>
+          <li>On-premise развёртывание</li>
+        </ul>
+
+        <a href="#contact" class="btn btn--ghost btn--lg tier__btn">Связаться с продажами</a>
+      </div>
+    </div>
+
+    <!-- Подсказка про доп. условия -->
+    <div class="pricing__note reveal">
+      <div class="pricing__note-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" width="22" height="22">
+          <circle cx="12" cy="12" r="9" stroke="currentColor"/>
+          <path d="M12 8v5M12 16h.01" stroke="currentColor" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="pricing__note-content">
+        <div class="pricing__note-title">Что важно знать про тарифы</div>
+        <div class="pricing__note-text">
+          Внедрение и подключение оборудования оплачиваются отдельно (от 250&nbsp;000&nbsp;₽ за корпус — точная смета после аудита). При оплате за&nbsp;год — скидка&nbsp;10%, за&nbsp;3&nbsp;года — скидка&nbsp;20%. Для проектов в рамках государственных программ и грантов — отдельные условия. Все цены без&nbsp;НДС / с&nbsp;НДС уточняйте в&nbsp;коммерческом предложении.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA / КОНТАКТЫ ============ -->
+<section class="section cta" id="contact">
+  <div class="container cta__inner">
+    <div class="cta__left reveal">
+      <span class="eyebrow eyebrow--light">Заявка на пилот</span>
+      <h2>Получите расчёт окупаемости по вашему производству</h2>
+      <p class="cta__lead">Рассчитаем экономический эффект на основании ваших фактических данных: поголовья, себестоимости корма, текущего FCR и падежа. Подготовка занимает 2 рабочих дня.</p>
+
+      <div class="contact-block">
+        <div class="contact-block__label">Прямая связь с разработчиком</div>
+        <div class="contact-block__row">
+          <a href="tel:+78124253265" class="contact-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            +7 (812) 425-32-65
+          </a>
+          <a href="mailto:sale@inline-ltd.ru" class="contact-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7">
+              <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor"/>
+              <path d="M3 7l9 6 9-6" stroke="currentColor" stroke-linecap="round"/>
+            </svg>
+            sale@inline-ltd.ru
+          </a>
+        </div>
+        <div class="contact-block__small">Разработчик: ООО «Инлайн» · Санкт-Петербург</div>
+      </div>
+    </div>
+
+    <div class="cta__right reveal" style="transition-delay: 0.1s;">
+      <div class="form-card" style="padding: 0; background: transparent; border: none; box-shadow: none;">
+        <!-- Битрикс24: встроенная форма -->
+        <script data-b24-form="inline/54/6475yd" data-skip-moving="true">(function(w,d,u){var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0);var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);})(window,document,'https://cdn-ru.bitrix24.ru/b36923532/crm/form/loader_54.js');</script>
+        <style>
+          /* Скрываем бейдж "Заряжено Битрикс24" */
+          .b24-form-sign,
+          .b24-widget-button-shadow-container,
+          [class*="b24-form-sign"],
+          [class*="bx-b24-form-sign"],
+          a[href*="bitrix24"],
+          div[data-b24-crm-button-widget] { display: none !important; }
+        
+
+/* ===== ТАРИФЫ ===== */
+.pricing {
+  background: white;
+  position: relative;
+}
+
+.pricing__head {
+  max-width: 760px;
+  margin-bottom: 56px;
+}
+
+.pricing__head h2 { margin-bottom: 16px; }
+
+.pricing__head p {
+  font-size: 18px;
+  color: var(--ink-60);
+  line-height: 1.55;
+}
+
+/* Переключатель отрасль/период */
+.pricing__switcher {
+  display: inline-flex;
+  background: var(--cream);
+  padding: 5px;
+  border-radius: 100px;
+  border: 1px solid var(--mist);
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.pricing__switch-btn {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 10px 18px;
+  border-radius: 100px;
+  border: none;
+  background: transparent;
+  color: var(--ink-60);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.pricing__switch-btn.active {
+  background: var(--brand-blue);
+  color: white;
+  box-shadow: 0 4px 12px rgba(13, 62, 112, 0.18);
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+@media (max-width: 968px) {
+  .pricing-grid { grid-template-columns: 1fr; gap: 16px; }
+}
+
+.pricing-tier-group {
+  display: none;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.pricing-tier-group.active { display: grid; }
+
+@media (max-width: 968px) {
+  .pricing-tier-group { grid-template-columns: 1fr; gap: 16px; }
+}
+
+.tier {
+  background: white;
+  border: 1.5px solid var(--mist);
+  border-radius: var(--r-lg);
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+}
+
+.tier:hover {
+  transform: translateY(-3px);
+  border-color: var(--brand-teal);
+  box-shadow: 0 16px 40px rgba(13, 62, 112, 0.08);
+}
+
+.tier--featured {
+  background: var(--brand-blue);
+  border-color: var(--brand-blue);
+  color: white;
+  transform: scale(1.02);
+  box-shadow: 0 24px 60px rgba(10, 42, 74, 0.18);
+}
+
+.tier--featured:hover {
+  transform: scale(1.02) translateY(-3px);
+  border-color: var(--brand-teal);
+}
+
+.tier__badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--clay);
+  color: white;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+.tier__name {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--brand-teal);
+  margin-bottom: 8px;
+}
+
+.tier--featured .tier__name { color: var(--mint); }
+
+.tier__title {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--brand-blue);
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.tier--featured .tier__title { color: white; }
+
+.tier__desc {
+  font-size: 14px;
+  color: var(--ink-60);
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
+
+.tier--featured .tier__desc { color: rgba(255,255,255,0.7); }
+
+.tier__price {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.tier__price-value {
+  font-family: var(--font-display);
+  font-size: clamp(34px, 4vw, 44px);
+  font-weight: 700;
+  color: var(--brand-blue);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.tier--featured .tier__price-value { color: white; }
+
+.tier__price-currency {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--brand-blue);
+}
+
+.tier--featured .tier__price-currency { color: white; }
+
+.tier__price-period {
+  font-size: 14px;
+  color: var(--ink-60);
+  font-weight: 500;
+}
+
+.tier--featured .tier__price-period { color: rgba(255,255,255,0.65); }
+
+.tier__price-old {
+  font-size: 14px;
+  color: var(--ink-40);
+  text-decoration: line-through;
+  margin-bottom: 16px;
+  font-family: var(--font-mono);
+}
+
+.tier--featured .tier__price-old { color: rgba(255,255,255,0.45); }
+
+.tier__price-old strong {
+  color: var(--clay);
+  text-decoration: none;
+  font-weight: 700;
+  margin-left: 8px;
+}
+
+.tier--featured .tier__price-old strong { color: #ffb59a; }
+
+.tier__divider {
+  border: none;
+  border-top: 1px solid var(--mist);
+  margin: 24px 0;
+}
+
+.tier--featured .tier__divider { border-color: rgba(255,255,255,0.15); }
+
+.tier__includes-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-60);
+  margin-bottom: 14px;
+}
+
+.tier--featured .tier__includes-label { color: var(--mint); }
+
+.tier ul {
+  list-style: none;
+  flex: 1;
+  margin-bottom: 28px;
+}
+
+.tier li {
+  position: relative;
+  padding: 8px 0 8px 26px;
+  font-size: 14px;
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+.tier--featured li { color: rgba(255,255,255,0.88); }
+
+.tier li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 12px;
+  width: 16px; height: 16px;
+  border-radius: 50%;
+  background: var(--leaf-15);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path d='M3.5 8l3 3 6-6.5' stroke='%234FA890' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' fill='none'/></svg>");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.tier--featured li::before {
+  background-color: rgba(115, 185, 191, 0.2);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path d='M3.5 8l3 3 6-6.5' stroke='%2373B9BF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' fill='none'/></svg>");
+}
+
+.tier__btn {
+  width: 100%;
+  margin-top: auto;
+}
+
+.tier--featured .btn--primary {
+  background: var(--mint);
+  color: var(--brand-blue);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.tier--featured .btn--primary:hover {
+  background: white;
+}
+
+.pricing__note {
+  background: var(--cream);
+  border: 1px solid var(--mist);
+  border-radius: var(--r-md);
+  padding: 24px 28px;
+  display: flex;
+  gap: 20px;
+  align-items: start;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .pricing__note { padding: 20px; flex-direction: column; gap: 12px; }
+}
+
+.pricing__note-icon {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--teal-12);
+  color: var(--brand-teal);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.pricing__note-content { flex: 1; min-width: 0; }
+
+.pricing__note-title {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--brand-blue);
+  margin-bottom: 4px;
+}
+
+.pricing__note-text {
+  font-size: 14px;
+  color: var(--ink-60);
+  line-height: 1.55;
+}
+
+@media (max-width: 480px) {
+  .tier { padding: 28px 22px; }
+  .tier--featured { transform: none; }
+  .tier--featured:hover { transform: translateY(-3px); }
+  .pricing__switcher { width: 100%; justify-content: center; }
+  .pricing__switch-btn { padding: 9px 14px; font-size: 11px; flex: 1; min-width: max-content; }
+}
+
+.faq__inner {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 64px;
+}
+
+@media (max-width: 968px) { .faq__inner { grid-template-columns: 1fr; gap: 32px; } }
+
+.faq__head h2 { margin-bottom: 16px; }
+.faq__head p { color: var(--ink-60); }
+
+.faq__list { display: flex; flex-direction: column; gap: 12px; }
+
+.faq-item {
+  background: var(--cream);
+  border: 1px solid var(--mist);
+  border-radius: var(--r-md);
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.faq-item[open] { border-color: var(--brand-teal); }
+
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 22px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--brand-blue);
+  letter-spacing: -0.01em;
+}
+
+.faq-item summary::-webkit-details-marker { display: none; }
+
+.faq-item__icon {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: white;
+  border: 1.5px solid var(--mist);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  transition: transform 0.25s, background 0.2s;
+}
+
+.faq-item[open] .faq-item__icon {
+  transform: rotate(45deg);
+  background: var(--brand-teal);
+  border-color: var(--brand-teal);
+  color: white;
+}
+
+.faq-item__body {
+  padding: 0 24px 22px;
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.faq-item__body p + p { margin-top: 10px; }
+
+</style>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ФУТЕР ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="#" class="logo" style="display:flex;align-items:center;text-decoration:none;">
+          <svg viewBox="0 0 1021 267" style="height:42px;width:auto;filter:brightness(0) invert(1);" aria-label="AgVisio"><use href="#logo-full"/></svg>
+        </a>
+        <p class="footer__about">Computer Vision for Livestock Farming. ИИ-видеоаналитика для агрохолдингов нового поколения.</p>
+      </div>
+      <div class="footer__col">
+        <div class="footer__col-title">Решения</div>
+        <ul>
+          <li><a href="#solutions">Яичное производство</a></li>
+          <li><a href="#solutions">Бройлерное птицеводство</a></li>
+          <li><a href="#solutions">Свиноводство</a></li>
+          <li><a href="#solutions">Молочный КРС</a></li>
+          <li><a href="#solutions">Мясной КРС</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <div class="footer__col-title">Компания</div>
+        <ul>
+          <li><a href="#how">Как работает</a></li>
+          <li><a href="#pricing">Тарифы</a></li>
+          <li><a href="#economics">Экономика</a></li>
+          <li><a href="#faq">Вопросы</a></li>
+          <li><a href="#contact">Контакты</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <div class="footer__col-title">Контакты</div>
+        <ul>
+          <li><a href="tel:+78124253265">+7 (812) 425-32-65</a></li>
+          <li><a href="mailto:sale@inline-ltd.ru">sale@inline-ltd.ru</a></li>
+          <li>Санкт-Петербург</li>
+          <li>ООО «Инлайн»</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 AgVisio · Разработано «Инлайн»</span>
+      <span><a href="#">Политика конфиденциальности</a> · <a href="#">Согласие на обработку ПД</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ===== Скролл-эффект для хедера =====
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 20) header.classList.add('scrolled');
+  else header.classList.remove('scrolled');
+});
+
+// ===== Мобильное меню =====
+const navToggle = document.getElementById('navToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+navToggle.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+  document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+});
+mobileMenu.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+    document.body.style.overflow = '';
+  });
+});
+
+// ===== Табы отраслей =====
+const tabs = document.querySelectorAll('.tab');
+const panels = document.querySelectorAll('.industry-panel');
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    const target = tab.dataset.tab;
+    tabs.forEach(t => t.classList.remove('active'));
+    panels.forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    document.querySelector(`[data-panel="${target}"]`).classList.add('active');
+  });
+});
+
+// ===== Reveal-анимации =====
+// ===== Переключатель тарифов =====
+const pricingBtns = document.querySelectorAll('.pricing__switch-btn');
+const pricingGroups = document.querySelectorAll('.pricing-tier-group');
+pricingBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const target = btn.dataset.pricing;
+    pricingBtns.forEach(b => b.classList.remove('active'));
+    pricingGroups.forEach(g => g.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelector(`[data-pricing-group="${target}"]`).classList.add('active');
+  });
+});
+
+
+const reveals = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12 });
+reveals.forEach(r => io.observe(r));
+
+// Форма обрабатывается Bitrix24
+</script>
+
+</body>
+</html>
