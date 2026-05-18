@@ -1454,35 +1454,20 @@ h3 { font-size: clamp(20px, 2.2vw, 26px); }
 </style>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
-(function(m,e,t,r,i,k,a){
-    m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-    m[i].l=1*new Date();
-    for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}
-    k=e.createElement(t);k.async=1;k.src=r;
-    k.onerror=function(){
-        var s2=e.createElement(t);s2.async=1;
-        s2.src='https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js';
-        s2.onload=function(){m[i](109227062,'init',{webvisor:true,clickmap:true,accurateTrackBounce:true,trackLinks:true});};
-        e.getElementsByTagName(t)[0].parentNode.insertBefore(s2,e.getElementsByTagName(t)[0]);
-    };
-    a=e.getElementsByTagName(t)[0];a.parentNode.insertBefore(k,a);
-})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-window.ym=window.ym||function(){(window.ym.a=window.ym.a||[]).push(arguments);};
-window.ym.l=1*new Date();
-
-(function(){
-    var init=function(){
-        if(typeof ym==='function'&&ym.a===undefined){
-            ym(109227062,'init',{webvisor:true,clickmap:true,accurateTrackBounce:true,trackLinks:true,ecommerce:'dataLayer'});
-        } else {
-            setTimeout(init,200);
-        }
-    };
-    document.addEventListener('DOMContentLoaded',function(){setTimeout(init,300);});
-})();
+   ym(109227062, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
 </script>
-<noscript><div><img src="https://mc.yandex.ru/watch/109227062" style="position:absolute; left:-9999px;" alt=""/></div></noscript>
+<noscript><div><img src="https://mc.yandex.ru/watch/109227062" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 </head>
 <body>
