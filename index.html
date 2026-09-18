@@ -1416,7 +1416,9 @@ h3 { font-size: clamp(20px, 2.2vw, 26px); }
 }
 
 .footer__bottom a { color: rgba(255,255,255,0.5); text-decoration: none; }
-.footer__bottom a:hover { color: var(--mint); }
+.footer__bottom a[href="privacy.html"],
+.footer__bottom a[href="personal-data.html"] { color: var(--mint); opacity: 0.85; }
+.footer__bottom a:hover { color: var(--mint); opacity: 1; }
 
 /* ===== АНИМАЦИИ ПРИ СКРОЛЛЕ ===== */
 .reveal {
