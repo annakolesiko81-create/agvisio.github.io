@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Disallow: /
+
+User-agent: Googlebot
+Allow: /
+Disallow:
+
+User-agent: Yandex
+Allow: /
+Disallow:
+
+Sitemap: https://agvisio.ru/sitemap.xml
