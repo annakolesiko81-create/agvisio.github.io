@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<link rel="canonical" href="https://agvisio.ru/krs.html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgVisio для КРС — ИИ-видеоаналитика для молочных и мясных ферм</title>
+<meta name="description" content="Компьютерное зрение для КРС: подсчёт поголовья, детекция поведения, мониторинг стада. Запускаем пилотное направление — особые условия для первых 5 хозяйств. Окупаемость 12–18 месяцев.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="AgVisio для КРС — ИИ-видеоаналитика для молочных и мясных ферм">
+<meta property="og:description" content="Ищем 5 пилотных хозяйств для КРС. Подсчёт поголовья и детекция поведения уже работают. Получите доступ к технологии на особых условиях.">
+<meta property="og:url" content="https://agvisio.ru/krs.html">
+<meta property="og:site_name" content="AgVisio">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNzcgMjY3Ij48cGF0aCBkPSJNMTM1LjY2NCAxMTcuMjE1QzE2MC40MDcgMTE0LjgxOSAxODIuNDA0IDEzMi45NDEgMTg0Ljc4OSAxNTcuNjg1QzE4Ny4xNzQgMTgyLjQyOCAxNjkuMDQzIDIwNC40MTggMTQ0LjI5OSAyMDYuNzkzQzExOS41NjggMjA5LjE2NiA5Ny41OTQzIDE5MS4wNDggOTUuMjEwNyAxNjYuMzE5QzkyLjgyNzIgMTQxLjU5IDExMC45MzYgMTE5LjYwOCAxMzUuNjY0IDExNy4yMTVaIiBmaWxsPSIjMUE3QTg1Ii8+PHBhdGggZD0iTTEzNi41NjcgNDAuMTI5M0MxNTAuNzg4IDM4LjY4MDEgMTUzLjgwNiA0OS44NzI3IDE1OS44NTcgNTkuODUxNEMxNjguMDk4IDczLjQ0MDQgMTc1LjQ4NSA4Ny40NDcyIDE4My41NTEgMTAxLjEyNUMxODYuMDc2IDEwNS40MDcgMTg4LjgyOSAxMTEuMzM1IDE5MiAxMTQuOTgzQzE4Ni42NDkgMTEyLjA3NyAxNzMuODQyIDEwOC44MDMgMTY3LjY2OSAxMDcuMzA4QzE2MC40NTQgMTA1LjU2MSAxNDkuODQyIDEwNC44OCAxNDIuMzgxIDEwNC41ODdDMTI5LjUxNiAxMDQuMTgxIDExNS44NSAxMDUuMzEzIDEwMy40NyAxMDguOTUxQzk3LjYxMTIgMTEwLjY3MiA5MS41NzExIDExMi40NzMgODYgMTE1LjAwMkM4OS4yMTYgMTEwLjYzOCA5My41NDEyIDEwMi40NjcgOTYuMzg4MiA5Ny40NjczTDExNS42NTYgNjQuMjI3OEMxMTguODA2IDU4LjczMDIgMTIxLjY1MiA1Mi43NDA5IDEyNS4xNTkgNDcuMzk5N0MxMjcuOTA2IDQzLjIxMzkgMTMxLjczMiA0MS4wNTIyIDEzNi41NjcgNDAuMTI5M1oiIGZpbGw9IiMwRDQ0NzAiLz48L3N2Zz4=">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--deep-ocean:#0A2A4A;--brand-blue:#0D3E70;--brand-teal:#1A7A85;--mint:#73B9BF;--leaf:#4FA890;--clay:#D97757;--cream:#F6F6EE;--ink:#1B2433;--ink-60:rgba(27,36,51,0.6);--ink-12:rgba(27,36,51,0.12);--leaf-15:rgba(79,168,144,0.15);--font-display:'Instrument Sans',Arial,sans-serif;--font-body:'Inter',Arial,sans-serif;--font-mono:'Roboto Mono',monospace}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--font-body);color:var(--ink);background:var(--cream);-webkit-font-smoothing:antialiased}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+a{text-decoration:none;color:inherit}
+.header{position:fixed;top:0;left:0;right:0;z-index:100;padding:8px 0;background:rgba(246,246,238,0.9);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color 0.3s}
+.header.scrolled{border-bottom-color:var(--ink-12)}
+.header__inner{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:700;font-size:22px;color:var(--brand-blue);letter-spacing:-0.02em}
+.logo__mark{width:36px;height:36px;border-radius:9px;background:linear-gradient(135deg,var(--brand-blue) 0%,var(--brand-teal) 60%,var(--leaf) 100%);display:grid;place-items:center;flex-shrink:0}
+.logo__mark svg{width:22px;height:22px}
+.nav{display:flex;align-items:center;gap:28px}
+.nav__link{font-size:15px;font-weight:500;color:var(--ink);opacity:0.75;transition:opacity 0.2s}
+.nav__link:hover{opacity:1;color:var(--brand-teal)}
+.nav__dropdown{position:relative}
+.nav__dropdown-menu{display:none;position:absolute;top:calc(100% + 12px);left:-16px;background:#fff;border:1px solid var(--ink-12);border-radius:12px;padding:8px;min-width:220px;box-shadow:0 8px 32px rgba(0,0,0,0.12);z-index:10}
+.nav__dropdown:hover .nav__dropdown-menu{display:block}
+.nav__dropdown-menu a{display:block;padding:10px 14px;font-size:14px;color:var(--ink);border-radius:8px;transition:background 0.15s}
+.nav__dropdown-menu a:hover{background:var(--leaf-15);color:var(--brand-teal)}
+.nav__dropdown-menu a.active{color:var(--brand-teal);font-weight:600}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;transition:all 0.2s;border:none}
+.btn--primary{background:var(--brand-teal);color:#fff}
+.btn--primary:hover{background:#176c76}
+.btn--lg{padding:16px 32px;font-size:17px;justify-content:center}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px}
+@media(max-width:768px){.nav{display:none}.nav-toggle{display:grid;place-items:center}}
+.sector-nav{background:#fff;border-bottom:2px solid var(--ink-12);padding:12px 0;position:sticky;top:57px;z-index:90}
+.sector-nav__inner{display:flex;gap:4px;overflow-x:auto}
+.sector-nav__btn{padding:8px 18px;border-radius:8px;font-size:14px;font-weight:500;color:var(--ink-60);white-space:nowrap;transition:all 0.15s;text-decoration:none;display:inline-block}
+.sector-nav__btn:hover{background:var(--leaf-15);color:var(--brand-teal)}
+.sector-nav__btn.active{background:var(--brand-teal);color:#fff}
+
+/* PILOT BADGE */
+.pilot-badge{background:linear-gradient(135deg,#B8860B,#DAA520);color:#fff;text-align:center;padding:12px 24px;font-family:var(--font-mono);font-size:13px;font-weight:500;letter-spacing:0.05em}
+.pilot-badge strong{font-weight:700}
+
+/* HERO КРС */
+.hero{padding:140px 0 80px;background:linear-gradient(180deg,#0A1F2E 0%,#0D3052 100%);color:#fff;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:0;right:0;width:60%;height:100%;background:radial-gradient(ellipse at 70% 40%,rgba(79,168,144,0.2) 0%,transparent 70%);pointer-events:none}
+.hero__breadcrumb{font-size:13px;opacity:0.6;margin-bottom:16px;font-family:var(--font-mono)}
+.hero__breadcrumb a{color:var(--mint);opacity:0.8}
+.hero__tag{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--mint);border:1px solid rgba(115,185,191,0.4);border-radius:20px;padding:5px 14px;margin-bottom:20px}
+.pilot-flag{background:rgba(218,165,32,0.2);color:#DAA520;font-size:10px;padding:2px 8px;border-radius:10px;border:1px solid rgba(218,165,32,0.4)}
+.hero h1{font-family:var(--font-display);font-size:clamp(32px,5vw,54px);font-weight:700;line-height:1.1;letter-spacing:-0.02em;margin-bottom:20px;max-width:680px}
+.hero h1 em{font-style:normal;color:var(--mint)}
+.hero__sub{font-size:18px;line-height:1.6;opacity:0.8;max-width:580px;margin-bottom:32px}
+.pilot-box{background:rgba(218,165,32,0.1);border:1px solid rgba(218,165,32,0.3);border-radius:16px;padding:24px;margin-bottom:36px;max-width:560px}
+.pilot-box__title{font-family:var(--font-display);font-weight:700;font-size:18px;color:#DAA520;margin-bottom:8px}
+.pilot-box p{font-size:15px;opacity:0.85;line-height:1.6}
+.pilot-box ul{list-style:none;margin-top:12px;display:flex;flex-direction:column;gap:8px}
+.pilot-box ul li{font-size:14px;opacity:0.8;padding-left:20px;position:relative}
+.pilot-box ul li::before{content:'✓';position:absolute;left:0;color:#DAA520;font-weight:700}
+.hero__metrics{display:flex;gap:32px;flex-wrap:wrap;margin-bottom:40px;padding:20px 24px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:16px}
+.metric{text-align:center}
+.metric__value{font-family:var(--font-display);font-size:clamp(24px,3.5vw,38px);font-weight:700;color:var(--mint);line-height:1}
+.metric__label{font-size:12px;opacity:0.65;margin-top:4px;font-family:var(--font-mono)}
+.section{padding:80px 0}
+.section--alt{background:#fff}
+.eyebrow{font-family:var(--font-mono);font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--brand-teal);margin-bottom:14px}
+.section__title{font-family:var(--font-display);font-size:clamp(26px,4vw,40px);font-weight:700;letter-spacing:-0.02em;color:var(--brand-blue);margin-bottom:16px;line-height:1.15}
+.section__sub{font-size:17px;line-height:1.65;color:var(--ink-60);max-width:640px}
+.modules{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-top:48px}
+.module-card{background:#fff;border:1px solid var(--ink-12);border-radius:16px;padding:28px;transition:box-shadow 0.2s,transform 0.2s}
+.module-card:hover{box-shadow:0 8px 32px rgba(0,0,0,0.08);transform:translateY(-2px)}
+.module-card__num{font-family:var(--font-mono);font-size:12px;color:var(--mint);font-weight:500;margin-bottom:12px}
+.module-card__title{font-family:var(--font-display);font-weight:700;font-size:18px;color:var(--brand-blue);margin-bottom:10px}
+.module-card p{font-size:14px;line-height:1.65;color:var(--ink-60)}
+.module-card__metric{margin-top:16px;padding:10px 14px;background:var(--leaf-15);border-radius:8px;font-family:var(--font-mono);font-size:13px;color:var(--brand-teal);font-weight:600}
+.module-card--soon{opacity:0.6;border-style:dashed}
+.module-card--soon .module-card__num{color:var(--ink-60)}
+.soon-tag{display:inline-block;font-size:11px;font-family:var(--font-mono);background:rgba(27,36,51,0.08);color:var(--ink-60);border-radius:6px;padding:2px 8px;margin-top:8px}
+
+/* ROADMAP */
+.roadmap{margin-top:48px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.roadmap-item{background:#fff;border:1px solid var(--ink-12);border-radius:16px;padding:24px;position:relative}
+.roadmap-item__phase{font-family:var(--font-mono);font-size:11px;font-weight:500;color:var(--mint);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:10px}
+.roadmap-item__title{font-family:var(--font-display);font-weight:700;font-size:16px;color:var(--brand-blue);margin-bottom:8px}
+.roadmap-item p{font-size:13px;color:var(--ink-60);line-height:1.55}
+.roadmap-item--active{border-color:var(--brand-teal);border-width:2px}
+.roadmap-item--active .roadmap-item__phase{color:var(--brand-teal)}
+.status-dot{width:8px;height:8px;border-radius:50%;display:inline-block;margin-right:6px}
+.status-dot--active{background:#22c55e}
+.status-dot--soon{background:#DAA520}
+.status-dot--planned{background:var(--ink-12)}
+
+/* FAQ */
+.faq{margin-top:48px}
+.faq-item{border-bottom:1px solid var(--ink-12);padding:20px 0}
+.faq-item summary{font-family:var(--font-display);font-weight:600;font-size:17px;color:var(--brand-blue);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'+';font-size:24px;color:var(--mint);flex-shrink:0;transition:transform 0.2s}
+.faq-item[open] summary::after{transform:rotate(45deg)}
+.faq-item p{font-size:15px;color:var(--ink-60);line-height:1.7;margin-top:14px}
+
+/* CTA ПИЛОТ */
+.cta-section{background:linear-gradient(135deg,#0A1F2E 0%,#0D3052 100%);padding:80px 0;color:#fff}
+.cta-inner{max-width:620px;margin:0 auto;text-align:center}
+.cta-tag{display:inline-block;background:rgba(218,165,32,0.15);border:1px solid rgba(218,165,32,0.3);color:#DAA520;font-family:var(--font-mono);font-size:12px;padding:5px 14px;border-radius:20px;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:20px}
+.cta-inner h2{font-family:var(--font-display);font-size:clamp(26px,4vw,38px);font-weight:700;margin-bottom:12px;letter-spacing:-0.02em}
+.cta-inner p{font-size:17px;opacity:0.75;margin-bottom:36px;line-height:1.6}
+.cta-form{display:flex;flex-direction:column;gap:12px}
+.cta-form input,.cta-form select{padding:14px 18px;border-radius:10px;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.1);color:#fff;font-size:15px;font-family:var(--font-body);outline:none;width:100%}
+.cta-form input::placeholder{opacity:0.5}
+.cta-form input:focus{border-color:var(--mint)}
+.cta-form .consent{font-size:12px;opacity:0.6;line-height:1.5;text-align:left}
+.cta-form .consent a{color:var(--mint)}
+.slots{display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:24px;font-size:14px;opacity:0.7;font-family:var(--font-mono)}
+.slots__count{font-size:24px;font-weight:700;color:#DAA520;opacity:1}
+.footer{background:var(--deep-ocean);color:#fff;padding:60px 0 0}
+.footer__top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px}
+.footer__about{font-size:14px;opacity:0.55;line-height:1.6;margin-top:14px}
+.footer__col-title{font-family:var(--font-mono);font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--mint);margin-bottom:16px}
+.footer__col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer__col a{font-size:14px;opacity:0.6;transition:opacity 0.2s}
+.footer__col a:hover{opacity:1;color:var(--mint)}
+.footer__bottom{border-top:1px solid rgba(255,255,255,0.08);padding:20px 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12px;opacity:0.5}
+.footer__bottom a{color:var(--mint);opacity:0.85}
+@media(max-width:768px){.footer__top{grid-template-columns:1fr 1fr;gap:32px}}
+@media(max-width:480px){.footer__top{grid-template-columns:1fr}.hero{padding:120px 0 60px}}
+</style>
+</head>
+<body>
+
+<!-- Пилотный баннер -->
+<div class="pilot-badge">
+  <strong>Направление КРС в разработке</strong> — ищем 3–5 пилотных хозяйств на особых условиях. <a href="#contact" style="color:#DAA520;text-decoration:underline">Подать заявку →</a>
+</div>
+
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="index.html" class="logo">
+      <div class="logo__mark">
+        <svg viewBox="0 0 277 267" fill="none"><path d="M135.664 117.215C160.407 114.819 182.404 132.941 184.789 157.685C187.174 182.428 169.043 204.418 144.299 206.793C119.568 209.166 97.5943 191.048 95.2107 166.319C92.8272 141.59 110.936 119.608 135.664 117.215Z" fill="white" opacity="0.9"/><path d="M136.567 40.1293C150.788 38.6801 153.806 49.8727 159.857 59.8514C168.098 73.4404 175.485 87.4472 183.551 101.125C186.076 105.407 188.829 111.335 192 114.983C186.649 112.077 173.842 108.803 167.669 107.308C160.454 105.561 149.842 104.88 142.381 104.587C129.516 104.181 115.85 105.313 103.47 108.951C97.6112 110.672 91.5711 112.473 86 115.002C89.216 110.638 93.5412 102.467 96.3882 97.4673L115.656 64.2278C118.806 58.7302 121.652 52.7409 125.159 47.3997C127.906 43.2139 131.732 41.0522 136.567 40.1293Z" fill="white"/></svg>
+      </div>
+      AgVisio
+    </a>
+    <nav class="nav">
+      <div class="nav__dropdown">
+        <span class="nav__link" style="cursor:pointer">Решения ▾</span>
+        <div class="nav__dropdown-menu">
+          <a href="pticevodstvo.html">Птицеводство</a>
+          <a href="svinovodstvo.html">Свиноводство</a>
+          <a href="krs.html" class="active">КРС</a>
+        </div>
+      </div>
+      <a href="index.html#how" class="nav__link">Как работает</a>
+      <a href="index.html#pricing" class="nav__link">Тарифы</a>
+      <a href="index.html#economics" class="nav__link">Экономика</a>
+      <a href="index.html#faq" class="nav__link">Вопросы</a>
+      <a href="#contact" class="btn btn--primary">Участвовать в пилоте</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Меню">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><line x1="3" y1="7" x2="21" y2="7" stroke="#0D3E70" stroke-width="2" stroke-linecap="round"/><line x1="3" y1="13" x2="21" y2="13" stroke="#0D3E70" stroke-width="2" stroke-linecap="round"/><line x1="3" y1="19" x2="21" y2="19" stroke="#0D3E70" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="sector-nav">
+  <div class="container">
+    <div class="sector-nav__inner">
+      <a href="pticevodstvo.html" class="sector-nav__btn">Птицеводство</a>
+      <a href="svinovodstvo.html" class="sector-nav__btn">Свиноводство</a>
+      <a href="krs.html" class="sector-nav__btn active">КРС</a>
+    </div>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero__breadcrumb"><a href="index.html">AgVisio</a> / КРС</div>
+    <div class="hero__tag">КРС <span class="pilot-flag">Пилот 2026</span></div>
+    <h1>ИИ-видеоаналитика<br>для <em>молочных и мясных</em><br>ферм</h1>
+    <p class="hero__sub">Запускаем направление КРС. Два первых модуля уже работают на реальных фермах — подсчёт поголовья и детекция поведения.</p>
+    <div class="pilot-box">
+      <div class="pilot-box__title">Ищем 3–5 пилотных хозяйств</div>
+      <p>Получите доступ к технологии на особых условиях в обмен на данные и обратную связь.</p>
+      <ul>
+        <li>Сниженная стоимость внедрения на период пилота</li>
+        <li>Приоритетный доступ к новым модулям</li>
+        <li>Совместная разработка специфики КРС</li>
+        <li>Участие в формировании продукта</li>
+      </ul>
+    </div>
+    <div class="hero__metrics">
+      <div class="metric"><div class="metric__value">98,7%</div><div class="metric__label">точность подсчёта</div></div>
+      <div class="metric"><div class="metric__value">12–18 мес.</div><div class="metric__label">окупаемость</div></div>
+      <div class="metric"><div class="metric__value">3–5</div><div class="metric__label">мест в пилоте</div></div>
+    </div>
+    <div>
+      <a href="#contact" class="btn btn--primary btn--lg" style="display:inline-flex;width:auto">Подать заявку на пилот</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="eyebrow">Что уже работает</div>
+    <h2 class="section__title">Доступные модули для КРС</h2>
+    <p class="section__sub">Два модуля готовы к внедрению. Остальные разрабатываются — пилотные хозяйства получат их первыми.</p>
+    <div class="modules">
+      <div class="module-card">
+        <div class="module-card__num">МОДУЛЬ 01 · РАБОТАЕТ</div>
+        <div class="module-card__title">Автоподсчёт поголовья</div>
+        <p>Автоматический подсчёт голов при перегоне, в доильном зале и на выпасе. Данные в реальном времени в дашборде зоотехника. Акты без ручного пересчёта.</p>
+        <div class="module-card__metric">Точность 98,7% · уже доступен</div>
+      </div>
+      <div class="module-card">
+        <div class="module-card__num">МОДУЛЬ 02 · РАБОТАЕТ</div>
+        <div class="module-card__title">Детекция поведения стада</div>
+        <p>Анализ активности, пищевого поведения, времени у кормушки и поилки. Аномалии в поведении группы — первый сигнал о проблемах со здоровьем или кормлением.</p>
+        <div class="module-card__metric">24/7 мониторинг · уже доступен</div>
+      </div>
+      <div class="module-card module-card--soon">
+        <div class="module-card__num">МОДУЛЬ 03 · В РАЗРАБОТКЕ</div>
+        <div class="module-card__title">Выявление охоты</div>
+        <p>Детекция поведенческих признаков охоты по видео — без датчиков-активиметров. Точное определение оптимального времени осеменения.</p>
+        <div class="soon-tag">Доступно пилотным хозяйствам первыми</div>
+      </div>
+      <div class="module-card module-card--soon">
+        <div class="module-card__num">МОДУЛЬ 04 · В РАЗРАБОТКЕ</div>
+        <div class="module-card__title">Ранняя диагностика (кетоз, хромота)</div>
+        <p>Анализ походки, осанки и пищевого поведения для раннего выявления кетоза, мастита и хромоты — до снижения надоев и клинических симптомов.</p>
+        <div class="soon-tag">Доступно пилотным хозяйствам первыми</div>
+      </div>
+      <div class="module-card module-card--soon">
+        <div class="module-card__num">МОДУЛЬ 05 · В РАЗРАБОТКЕ</div>
+        <div class="module-card__title">Бесконтактный весовой контроль</div>
+        <p>Оценка живой массы КРС по видео без весов — для мясного направления и контроля кондиции молочного стада.</p>
+        <div class="soon-tag">Доступно пилотным хозяйствам первыми</div>
+      </div>
+      <div class="module-card module-card--soon">
+        <div class="module-card__num">МОДУЛЬ 06 · В РАЗРАБОТКЕ</div>
+        <div class="module-card__title">Интеграция с доильным оборудованием</div>
+        <p>Синхронизация с DeLaval, Lely, GEA. Данные видеоаналитики + данные надоев = полная картина по каждой корове.</p>
+        <div class="soon-tag">Доступно пилотным хозяйствам первыми</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="eyebrow">Дорожная карта</div>
+    <h2 class="section__title">Когда появятся новые модули</h2>
+    <div class="roadmap">
+      <div class="roadmap-item roadmap-item--active">
+        <div class="roadmap-item__phase"><span class="status-dot status-dot--active"></span>Сейчас · Q3 2026</div>
+        <div class="roadmap-item__title">Подсчёт и поведение</div>
+        <p>Подсчёт поголовья (98,7%) и мониторинг поведения стада. Доступны для пилотных хозяйств уже сегодня.</p>
+      </div>
+      <div class="roadmap-item">
+        <div class="roadmap-item__phase"><span class="status-dot status-dot--soon"></span>Q4 2026</div>
+        <div class="roadmap-item__title">Выявление охоты и ранняя диагностика</div>
+        <p>Детекция охоты по поведению, первые модели выявления кетоза и хромоты. Для пилотных хозяйств — бесплатно в рамках договора.</p>
+      </div>
+      <div class="roadmap-item">
+        <div class="roadmap-item__phase"><span class="status-dot status-dot--planned"></span>Q1–Q2 2027</div>
+        <div class="roadmap-item__title">Весовой контроль и интеграции</div>
+        <p>Бесконтактное взвешивание по видео, интеграция с DeLaval / Lely / GEA, оценка кондиции тела.</p>
+      </div>
+      <div class="roadmap-item">
+        <div class="roadmap-item__phase"><span class="status-dot status-dot--planned"></span>2027</div>
+        <div class="roadmap-item__title">Полная платформа для КРС</div>
+        <p>Все модули в единой системе. Коммерческий запуск с тарифами, аналогичными птицеводству и свиноводству.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="eyebrow">Вопросы</div>
+    <h2 class="section__title">Часто спрашивают про пилот КРС</h2>
+    <div class="faq">
+      <details class="faq-item">
+        <summary>Чем пилотное хозяйство отличается от обычного клиента?</summary>
+        <p>Пилотное хозяйство получает технологию по сниженной стоимости в обмен на активную обратную связь: данные, участие в тестировании новых модулей и совместную работу с командой разработки. Все результаты остаются у хозяйства, данные обезличены и используются только для улучшения продукта.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Подходит ли система для молочного и мясного КРС одновременно?</summary>
+        <p>Модули подсчёта и поведения работают в обоих направлениях. Специфические модули (охота, надои, весовой контроль) разрабатываются с учётом различий молочного и мясного производства и будут настраиваться под направление хозяйства.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Какое минимальное поголовье для пилота?</summary>
+        <p>Рекомендуемый минимум — от 200 коров или 500 голов мясного КРС. Меньший масштаб не даёт статистически значимых данных для сравнения. Оптимальный размер пилота — один корпус или одна дойная группа.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Когда будут доступны модули выявления охоты и диагностики?</summary>
+        <p>Q4 2026 — для пилотных хозяйств, которые присоединяются сейчас. Коммерческий запуск — Q1–Q2 2027. Пилотные хозяйства получат их первыми и в рамках действующего договора.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Совместима ли система с нашим доильным оборудованием?</summary>
+        <p>Интеграция с доильным оборудованием (DeLaval, Lely, GEA, SAC) включена в дорожную карту Q1 2027. На этапе пилота видеоаналитика работает параллельно с существующими системами учёта надоев.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section" id="contact">
+  <div class="container">
+    <div class="cta-inner">
+      <div class="cta-tag">Пилотный набор 2026</div>
+      <h2>Станьте одним из первых хозяйств на платформе AgVisio для КРС</h2>
+      <p>Оставьте заявку — обсудим условия пилота и покажем, что уже работает.</p>
+      <div class="slots"><span class="slots__count">3–5</span>&nbsp;мест в пилотном наборе</div>
+      <form class="cta-form" onsubmit="return handleSubmit(event)">
+        <input type="text" name="name" placeholder="Имя и компания" required>
+        <input type="tel" name="phone" placeholder="Телефон или e-mail" required>
+        <input type="number" name="flock" placeholder="Поголовье КРС (необязательно)">
+        <select name="direction">
+          <option value="" disabled selected>Направление хозяйства</option>
+          <option value="milk">Молочное</option>
+          <option value="meat">Мясное</option>
+          <option value="both">Молочное + мясное</option>
+        </select>
+        <input type="hidden" name="industry" value="krs">
+        <button type="submit" class="btn btn--primary btn--lg">Подать заявку на пилот</button>
+        <p class="consent">Нажимая кнопку, вы даёте согласие на обработку персональных данных в соответствии с <a href="personal-data.html">152-ФЗ</a> и <a href="privacy.html">Политикой конфиденциальности</a>.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="index.html" class="logo" style="color:#fff;">AgVisio</a>
+        <p class="footer__about">Computer Vision for Livestock Farming. ИИ-видеоаналитика для агрохолдингов нового поколения.</p>
+      </div>
+      <div class="footer__col">
+        <div class="footer__col-title">Решения</div>
+        <ul><li><a href="pticevodstvo.html">Птицеводство</a></li><li><a href="svinovodstvo.html">Свиноводство</a></li><li><a href="krs.html">КРС</a></li></ul>
+      </div>
+      <div class="footer__col">
+        <div class="footer__col-title">Компания</div>
+        <ul><li><a href="index.html#how">Как работает</a></li><li><a href="index.html#pricing">Тарифы</a></li><li><a href="index.html#economics">Экономика</a></li><li><a href="index.html#faq">Вопросы</a></li></ul>
+      </div>
+      <div class="footer__col">
+        <div class="footer__col-title">Контакты</div>
+        <ul><li><a href="tel:+78124253265">+7 (812) 425-32-65</a></li><li><a href="mailto:sale@inline-ltd.ru">sale@inline-ltd.ru</a></li><li>Санкт-Петербург</li></ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 AgVisio · Разработано «Инлайн»</span>
+      <span><a href="privacy.html">Политика конфиденциальности</a> · <a href="personal-data.html">Согласие на обработку ПД</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 20); });
+function handleSubmit(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('button[type=submit]');
+  btn.textContent = 'Отправляем…'; btn.disabled = true;
+  if (typeof ym === 'function') ym(109227062, 'reachGoal', 'form_submit_krs');
+  setTimeout(() => { e.target.innerHTML = '<p style="color:var(--mint);font-size:16px;font-weight:600;padding:20px 0">Заявка принята — менеджер свяжется с вами в течение рабочего дня для обсуждения условий пилота.</p>'; }, 800);
+  return false;
+}
+</script>
+</body>
+</html>
