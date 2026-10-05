@@ -201,8 +201,6 @@ body {
 }
 
 .eyebrow--light { color: var(--mint); }
-.nav__dropdown:hover .nav__dropdown-menu { display:block !important; }
-.nav__dropdown-menu a:hover { background:var(--leaf-15) !important; color:var(--brand-teal) !important; }
 
 h1, h2, h3, h4 {
   font-family: var(--font-display);
@@ -1521,14 +1519,7 @@ h3 { font-size: clamp(20px, 2.2vw, 26px); }
       <svg viewBox="0 0 1021 267" style="height:42px;width:auto;" aria-label="AgVisio"><use href="#logo-full"/></svg>
     </a>
     <nav class="nav">
-      <div class="nav__dropdown" style="position:relative">
-        <a href="#solutions" class="nav__link" style="cursor:pointer">Решения ▾</a>
-        <div class="nav__dropdown-menu" style="display:none;position:absolute;top:calc(100% + 12px);left:-16px;background:#fff;border:1px solid rgba(27,36,51,0.12);border-radius:12px;padding:8px;min-width:220px;box-shadow:0 8px 32px rgba(0,0,0,0.12);z-index:10">
-          <a href="pticevodstvo.html" style="display:block;padding:10px 14px;font-size:14px;color:#1B2433;border-radius:8px;text-decoration:none;transition:background 0.15s">Птицеводство</a>
-          <a href="svinovodstvo.html" style="display:block;padding:10px 14px;font-size:14px;color:#1B2433;border-radius:8px;text-decoration:none;transition:background 0.15s">Свиноводство</a>
-          <a href="krs.html" style="display:block;padding:10px 14px;font-size:14px;color:#1B2433;border-radius:8px;text-decoration:none;transition:background 0.15s">КРС <span style="font-size:10px;background:rgba(218,165,32,0.15);color:#B8860B;padding:2px 6px;border-radius:4px;margin-left:4px">Пилот</span></a>
-        </div>
-      </div>
+      <a href="#solutions" class="nav__link">Решения</a>
       <a href="#how" class="nav__link">Как работает</a>
       <a href="#pricing" class="nav__link">Тарифы</a>
       <a href="#economics" class="nav__link">Экономика</a>
@@ -1935,51 +1926,6 @@ h3 { font-size: clamp(20px, 2.2vw, 26px); }
 </section>
 
 <!-- ============ РЕШЕНИЯ ПО ОТРАСЛЯМ ============ -->
-
-<!-- БЛОК ВЫБОРА ОТРАСЛИ -->
-<section style="padding:60px 0;background:#fff;border-bottom:1px solid rgba(27,36,51,0.08)">
-  <div class="container">
-    <div style="text-align:center;margin-bottom:36px">
-      <div class="eyebrow">Выберите вашу отрасль</div>
-      <h2 style="font-family:var(--font-display);font-size:clamp(24px,3.5vw,36px);font-weight:700;color:var(--brand-blue);letter-spacing:-0.02em;margin-bottom:10px">Платформа адаптирована<br>под каждый вид производства</h2>
-      <p style="font-size:16px;color:var(--ink-60);max-width:520px;margin:0 auto;line-height:1.6">Одна технология — разные задачи для каждой отрасли. Перейдите на страницу вашего направления.</p>
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px">
-      <a href="pticevodstvo.html" style="display:block;background:var(--cream);border:2px solid transparent;border-radius:20px;padding:32px;text-decoration:none;transition:all 0.2s;cursor:pointer" onmouseover="this.style.borderColor='var(--brand-teal)';this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(0,0,0,0.1)'" onmouseout="this.style.borderColor='transparent';this.style.transform='';this.style.boxShadow=''">
-        <img src="img_bird.png" alt="Птицеводство" style="width:140px;height:140px;object-fit:contain;margin-bottom:14px;display:block">
-        <div style="font-family:var(--font-display);font-weight:700;font-size:22px;color:var(--brand-blue);margin-bottom:8px">Птицеводство</div>
-        <div style="font-size:14px;color:var(--ink-60);line-height:1.6;margin-bottom:20px">Бройлеры и яичное производство. Контроль FCR, падежа, точный подсчёт при перегоне.</div>
-        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px">
-          <span style="font-size:12px;background:var(--leaf-15);color:var(--brand-teal);padding:4px 10px;border-radius:20px;font-family:var(--font-mono)">−18% падёж</span>
-          <span style="font-size:12px;background:var(--leaf-15);color:var(--brand-teal);padding:4px 10px;border-radius:20px;font-family:var(--font-mono)">3–9 мес. ROI</span>
-        </div>
-        <div style="color:var(--brand-teal);font-weight:600;font-size:14px">Подробнее →</div>
-      </a>
-      <a href="svinovodstvo.html" style="display:block;background:var(--cream);border:2px solid transparent;border-radius:20px;padding:32px;text-decoration:none;transition:all 0.2s" onmouseover="this.style.borderColor='var(--brand-teal)';this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(0,0,0,0.1)'" onmouseout="this.style.borderColor='transparent';this.style.transform='';this.style.boxShadow=''">
-        <img src="img_pig.png" alt="Свиноводство" style="width:140px;height:140px;object-fit:contain;margin-bottom:14px;display:block">
-        <div style="font-family:var(--font-display);font-weight:700;font-size:22px;color:var(--brand-blue);margin-bottom:8px">Свиноводство</div>
-        <div style="font-size:14px;color:var(--ink-60);line-height:1.6;margin-bottom:20px">Контроль FCR, раннее выявление болезней, точная отгрузка и детекция агрессии.</div>
-        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px">
-          <span style="font-size:12px;background:var(--leaf-15);color:var(--brand-teal);padding:4px 10px;border-radius:20px;font-family:var(--font-mono)">+252 ₽/голову</span>
-          <span style="font-size:12px;background:var(--leaf-15);color:var(--brand-teal);padding:4px 10px;border-radius:20px;font-family:var(--font-mono)">3–9 мес. ROI</span>
-        </div>
-        <div style="color:var(--brand-teal);font-weight:600;font-size:14px">Подробнее →</div>
-      </a>
-      <a href="krs.html" style="display:block;background:var(--cream);border:2px solid rgba(218,165,32,0.3);border-radius:20px;padding:32px;text-decoration:none;transition:all 0.2s;position:relative;overflow:hidden" onmouseover="this.style.borderColor='#DAA520';this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(0,0,0,0.1)'" onmouseout="this.style.borderColor='rgba(218,165,32,0.3)';this.style.transform='';this.style.boxShadow=''">
-        <div style="position:absolute;top:16px;right:16px;background:#DAA520;color:#fff;font-size:10px;font-family:var(--font-mono);padding:3px 10px;border-radius:10px;font-weight:600">ПИЛОТ 2026</div>
-        <img src="img_cow.png" alt="КРС" style="width:140px;height:140px;object-fit:contain;margin-bottom:14px;display:block">
-        <div style="font-family:var(--font-display);font-weight:700;font-size:22px;color:var(--brand-blue);margin-bottom:8px">КРС</div>
-        <div style="font-size:14px;color:var(--ink-60);line-height:1.6;margin-bottom:20px">Молочное и мясное направление. Подсчёт и поведение уже работают. Ищем пилотные хозяйства.</div>
-        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px">
-          <span style="font-size:12px;background:rgba(218,165,32,0.12);color:#B8860B;padding:4px 10px;border-radius:20px;font-family:var(--font-mono)">3–5 мест</span>
-          <span style="font-size:12px;background:rgba(218,165,32,0.12);color:#B8860B;padding:4px 10px;border-radius:20px;font-family:var(--font-mono)">Особые условия</span>
-        </div>
-        <div style="color:#B8860B;font-weight:600;font-size:14px">Участвовать в пилоте →</div>
-      </a>
-    </div>
-  </div>
-</section>
-
 <section class="section industries" id="solutions">
   <div class="container">
     <div class="industries__head reveal">
@@ -3373,10 +3319,11 @@ h3 { font-size: clamp(20px, 2.2vw, 26px); }
       <div class="footer__col">
         <div class="footer__col-title">Решения</div>
         <ul>
-          <li><a href="pticevodstvo.html">Птицеводство</a></li>
-          <li><a href="svinovodstvo.html">Свиноводство</a></li>
-          <li><a href="krs.html">КРС</a></li>
-          
+          <li><a href="#solutions">Яичное производство</a></li>
+          <li><a href="#solutions">Бройлерное птицеводство</a></li>
+          <li><a href="#solutions">Свиноводство</a></li>
+          <li><a href="#solutions">Молочный КРС</a></li>
+          <li><a href="#solutions">Мясной КРС</a></li>
         </ul>
       </div>
       <div class="footer__col">
